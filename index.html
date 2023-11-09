@@ -12,17 +12,28 @@
       src="https://kit.fontawesome.com/71a9c32d59.js"
       crossorigin="anonymous"
     ></script>
-    <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
-    />
 
     <link
       rel="shortcut icon"
       href="./assets/portfolio-favicon.png"
       type="image/x-icon"
     />
+
+    <!-- Include the library. -->
+    <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
+
+    <!-- Optionally, include the theme (if you don't want to struggle to write the CSS) -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
+    />
+
+    <script src="./index.js"></script>
+    <script>
+      GitHubCalendar(".calendar", "Mohammmedrafique");
+      // or enable responsive functionality
+      GitHubCalendar(".calendar", "Mohammmedrafique", { responsive: true });
+    </script>
   </head>
 
   <body>
@@ -164,36 +175,27 @@
 
         <div>
           <img
-            id="github-stats-card"
-            src="https://github-readme-stats.vercel.app/api?username=mohammmedrafique&theme=radical&show_icons=true&locale=en"
-            alt="clrsurya11"
-            style="max-width: 100%; height: auto"
-          />
-        </div>
-
-        <div>
-          <img
             id="github-top-langs"
             src="https://github-readme-stats.vercel.app/api/top-langs/?username=mohammmedrafique&custom_title=Most_language_Used&theme=radical&show_icons=true&locale=en&layout=compact"
             alt="mohammmedrafique"
             style="max-width: 100%; height: auto"
           />
         </div>
+
+        <div>
+          <img
+            id="github-stats-card"
+            src="https://github-readme-stats.vercel.app/api?username=mohammmedrafique&theme=radical&show_icons=true&locale=en"
+            alt="clrsurya11"
+            style="max-width: 100%; height: auto"
+          />
+        </div>
       </section>
       <div class="git-stat-div react-activity-calendar">
-        <div>
-          <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
-          <link
-            rel="stylesheet"
-            href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
-          />
-
-          <div
-            style="background-color: white; padding: 10px; border-radius: 9px"
-            class="calendar react-activity-calendar"
-          >
-            Loading the data just for you.
-          </div>
+        <!-- Prepare a container for your calendar. -->
+        <div class="calendar">
+          <!-- Loading stuff -->
+          Loading the data just for you.
         </div>
       </div>
     </div>
@@ -404,19 +406,19 @@
           <div class="contact-left">
             <h1 class="sub-title">Contact Me</h1>
             <p>
-              <a href="mailto:kumarsudhist@gmail.com" id="contact-email"
+              <a href="mailto:Kota.mohdrafiq@gmail.com" id="contact-email"
                 ><i class="fa-solid fa-paper-plane"></i>
-                kumarsudhist@gmail.com</a
+                Kota.mohdrafiq@gmail.com</a
               >
             </p>
             <p>
               <a href="" id="contact-phone">
-                <i class="fa-solid fa-square-phone"></i> +91-9798289729</a
+                <i class="fa-solid fa-square-phone"></i> +91-9829740688</a
               >
             </p>
             <p>
               <a id="contact-phone">
-                <i class="fa-solid fa-location"></i>Ramgarh, Jharkhand, India</a
+                <i class="fa-solid fa-location"></i>Rajasthan, India</a
               >
             </p>
             <div class="social-icons">
@@ -461,9 +463,3 @@
     </div>
   </body>
 </html>
-
-<script src="./index.js"></script>
-<script>
-  GitHubCalendar(".calendar", "Mohammmedrafique");
-  GitHubCalendar(".calendar", "Mohammmedrafique", { responsive: true });
-</script>

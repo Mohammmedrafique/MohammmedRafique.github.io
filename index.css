@@ -257,7 +257,7 @@ nav ul li a:hover::after {
 }
 .container-git {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto auto;
   margin: 50px;
   gap: 20px;
 }

@@ -432,6 +432,7 @@ nav .fas {
 @media screen and (min-width: 280px) and (max-width: 600px) {
   #header {
     background-image: url(images/plane_black.PNG);
+    height: auto;
   }
 
   .container-git {
@@ -440,14 +441,16 @@ nav .fas {
   .header-text {
     display: flex;
     flex-direction: column;
-    margin: 40% auto;
-    height: 50vh;
+    margin: 15% auto;
+    /* height: 50vh; */
+    height: auto;
     text-align: center;
     align-items: center;
     justify-content: center;
     position: static;
     font-size: 16px;
   }
+
   .header-text h1 {
     font-size: 30px;
   }

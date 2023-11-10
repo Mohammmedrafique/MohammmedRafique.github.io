@@ -20,7 +20,7 @@
 //   }
 //   event.currentTarget.classList.add("active");
 //   document.getElementById(name).classList.add("active-tab");
-// };
+// };;;
 
 // let sidemenu = document.getElementById("sidemenu");
 

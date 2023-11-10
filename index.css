@@ -296,13 +296,15 @@ nav ul li a:hover::after {
 .project-list {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 40px;
   margin-top: 50px;
 }
 .work {
   display: grid;
   grid-template-columns: 65% 35%;
+  grid-template-columns: repeat(1, 1fr);
+  height: auto;
   border-radius: 10px;
   border: 2px solid #b54769;
   background-color: #080808;
@@ -538,6 +540,8 @@ nav .fas {
 
   .work {
     grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    height: auto;
   }
 }
 

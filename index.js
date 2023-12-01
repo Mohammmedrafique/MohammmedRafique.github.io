@@ -109,13 +109,13 @@
 // //https://drive.google.com/file/d/1hrqyL-UtRO5vuL0LRUvFcqCWiv41DtEM/view?usp=sharing
 document.getElementById("resume-link-1").addEventListener("click", () => {
   window.open(
-    "https://drive.google.com/file/d/1hrqyL-UtRO5vuL0LRUvFcqCWiv41DtEM/view?usp=sharing"
+    "https://drive.google.com/file/d/10vk5N9532tyWK9bYd27fa83Qim-TsiKR/view?usp=drive_link"
   );
 });
 
 document.getElementById("resume-link-2").addEventListener("click", () => {
   window.open(
-    "https://drive.google.com/file/d/1hrqyL-UtRO5vuL0LRUvFcqCWiv41DtEM/view?usp=sharing"
+    "https://drive.google.com/file/d/10vk5N9532tyWK9bYd27fa83Qim-TsiKR/view?usp=drive_link"
   );
 });
 

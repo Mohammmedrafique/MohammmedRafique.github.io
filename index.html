@@ -143,6 +143,21 @@
       <h1 class="sub-title">Technical Skills</h1>
       <div id="skill_container"></div>
     </div>
+    <script>
+      function opentab(tabName) {
+          var i;
+          var x = document.getElementsByClassName("contents");
+          var tabs = document.getElementsByClassName("skill-ed");
+          for (i = 0; i < x.length; i++) {
+              x[i].classList.remove("active-tab");
+          }
+          for (i = 0; i < tabs.length; i++) {
+              tabs[i].classList.remove("active");
+          }
+          document.getElementById(tabName).classList.add("active-tab");
+          event.currentTarget.classList.add("active");
+      }
+  </script>
 
     <!--------------------- Github stats ----------------------->
     <div class="" id="github">
@@ -278,7 +293,7 @@
             <img src="assets/projectpic/furniturecraft.png" />
             <div class="layer">
               <h2 class="project-heading project-title">
-                furniture-craft: Explore the Artistry of Fine Furniture
+                furniture-craft
               </h2>
               <p class="project-description">
                 Welcome to furniture craft where craftsmanship meets comfort and
@@ -288,7 +303,8 @@
               </p>
               <p>
                 <span class="tech-stack project-tech-stack">Tech Stack : </span>
-                HTML | CSS | JavaScript |React | MongoDB | Expressjs | Nodejs | TypeScript
+                HTML | CSS | JavaScript |React | MongoDB | Expressjs | Nodejs |
+                TypeScript
               </p>
               <div>
                 <a
@@ -309,36 +325,36 @@
 
           <!--------------------- Fourth Project ----------------------->
 
-          <!--           <div class="work project-card">
+          <div class="work project-card">
             <div id="project_Image">
-              <img src="assets/Car.png" />
+              <img src="assets/chatbot_flow_homepage.png" />
             </div>
             <div class="layer">
-              <h2 class="project-heading project-title">Car Rental Services</h2>
+              <h2 class="project-heading project-title">
+                Chatbot flow builder
+              </h2>
 
               <p class="project-description">
-                Develop a Java-based Car Rental System to facilitate customers
-                in searching, reserving, modifying, and canceling car
-                reservations, while also providing administrative tools for car
-                and customer management, as well as generating usage and revenue
-                reports.<br /><br />
-
-                Individual project created in 5 days.
+                A React-based chatbot flow builder using React Flow library for
+                visually designing chatbot conversation flows. <br />
+                <br />It offers drag-and-drop functionality, customizable nodes,
+                and easy saving/loading of flows. <br /><br />
+                Individual project created in 3 days.
               </p>
 
               <p>
                 <span class="tech-stack project-tech-stack">Tech Stack : </span>
-                Java | Hibernate | Maven | MySQL
+                HTML | CSS | JavaScript |React | React Flow library 
               </p>
               <div>
                 <a
-                  href="https://github.com/ersudhist/gamy-rate-5438/tree/main"
+                  href="https://github.com/Mohammmedrafique/Chatbot-flow-builder"
                   target="_blank"
                   class="project-github-link"
                   >Github</a
                 >
                 <a
-                  href="https://drive.google.com/drive/folders/1NzC4bCMfj8fmeENFIfFXoWBcsxTtRpFf?usp=sharing"
+                  href="https://chatbot-flow-builder-seven-eta.vercel.app/"
                   target="_blank"
                   class="project-deployed-link"
                   >Live</a
@@ -346,41 +362,40 @@
               </div>
             </div>
           </div>
- -->
+
           <!--------------------- Fifth Project ----------------------->
 
           <div class="work project-card">
             <div id="project_Image">
-              <img src="assets/Covid.png" />
+              <img src="assets/masai_homepage.png" />
             </div>
             <div class="layer">
               <h2 class="project-heading project-title">
-                Covid-19 vaccination
+                Full-Stack Blog Application
               </h2>
 
               <p class="project-description">
-                This application aims to make it easier and more convenient for
-                citizens to get vaccinated against Covid-19. It provides an
-                online platform to register and schedule vaccination
-                appointments.<br /><br />
-                The application also includes user and admin validation and
-                authentication.<br /><br />
-                collaborative project created in 5 days by a team of 4 members.
+                it is a full-featured blog platform using the MERN stack
+                (MongoDB, Express.js, React.js, Node.js). <br /> <br>
+                Users can register, create, edit, delete, view posts, comment,
+                and like posts, offering an interactive blogging experience.
+                <br /> <br>
+                Individual project created in 3 days.
               </p>
               <p>
                 <span class="tech-stack project-tech-stack">Tech Stack : </span>
-                Java | Spring Boot | MySQL | | Spring Security | STS | Hibernate
-                | Maven | HTML | CSS | JavaScript
+                JavaScript | Nodejs | Expressjs | React | MongoDB | HTML | CSS |
+                JavaScript
               </p>
               <div>
                 <a
-                  href="https://github.com/Sawantaviraj2/honest-wing-5796/tree/main"
+                  href="https://github.com/Mohammmedrafique/Blog_web_app"
                   target="_blank"
                   class="project-github-link"
                   >Github</a
                 >
                 <a
-                  href="https://drive.google.com/file/d/1hVSBWRQKnZTwstLyzmOk3JcQAqHV88_c/view?usp=sharing"
+                  href="https://blog-web-app-qbvk.vercel.app/"
                   target="_blank"
                   class="project-deployed-link"
                   >Live</a

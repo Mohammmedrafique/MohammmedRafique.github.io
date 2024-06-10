@@ -32,6 +32,14 @@ nav {
   flex-wrap: wrap;
   padding: 5px 10%;
 }
+nav img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 12px;
+}
+nav#nav-menu {
+  height: 70px;
+}
 
 nav.sticky {
   position: fixed;
@@ -309,7 +317,7 @@ nav ul li a:hover::after {
   border-radius: 10px;
   border: 2px solid #b54769;
   background-color: #080808;
-  padding: 20px;
+  padding: 10px;
 }
 .work:hover {
   transform: scale(1.05);
@@ -323,11 +331,11 @@ nav ul li a:hover::after {
 .layer {
   width: 100%;
   text-align: center;
-  padding: 10px;
+  padding: 5px;
 }
 .layer p {
   font-weight: 500;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .layer a {
   color: #bc3b63;
@@ -343,7 +351,7 @@ nav ul li a:hover::after {
   color: #fff;
 }
 .layer h2 {
-  margin: 20px auto;
+  margin: 10px auto;
 }
 
 /* Contact  */

@@ -10,19 +10,19 @@ document.getElementById("resume-link-2").addEventListener("click", () => {
   );
 });
 
-let details = document.getElementsByClassName("skill-ed");
-let content = document.getElementsByClassName("contents");
+// let details = document.getElementsByClassName("skill-ed");
+// let content = document.getElementsByClassName("contents");
 
-opentab = (name, event) => {
-  for (detail of details) {
-    detail.classList.remove("active");
-  }
-  for (con of content) {
-    con.classList.remove("active-tab");
-  }
-  event.currentTarget.classList.add("active");
-  document.getElementById(name).classList.add("active-tab");
-};
+// opentab = (name, event) => {
+//   for (detail of details) {
+//     detail.classList.remove("active");
+//   }
+//   for (con of content) {
+//     con.classList.remove("active-tab");
+//   }
+//   event.currentTarget.classList.add("active");
+//   document.getElementById(name).classList.add("active-tab");
+// };
 
 let sidemenu = document.getElementById("sidemenu");
 

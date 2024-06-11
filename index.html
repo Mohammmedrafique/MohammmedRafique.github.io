@@ -95,8 +95,8 @@
             <p id="user-detail-intro">
               Highly motivated and skilled Full Stack Developer with a strong
               foundation in console-based projects and leadership experience.
-              Proficient in HTML, CSS, Javascript, Java, Spring Boot, Hibernate,
-              and Maven. Proven problem-solving abilities and a result-oriented
+              Proficient in HTML, CSS, Javascript, Nodejs, Expressjs, React, and
+              tailwind. Proven problem-solving abilities and a result-oriented
               approach, ready to contribute to impactful software development
               projects.
             </p>
@@ -131,7 +131,7 @@
                 </li>
                 <li>
                   <span>Bachelor of technology</span><br />Rajasthan Technical
-                  University, kota<br />August 2016 - May 2021
+                  University, kota<br />May 2021
                 </li>
               </ul>
             </div>
@@ -145,19 +145,19 @@
     </div>
     <script>
       function opentab(tabName) {
-          var i;
-          var x = document.getElementsByClassName("contents");
-          var tabs = document.getElementsByClassName("skill-ed");
-          for (i = 0; i < x.length; i++) {
-              x[i].classList.remove("active-tab");
-          }
-          for (i = 0; i < tabs.length; i++) {
-              tabs[i].classList.remove("active");
-          }
-          document.getElementById(tabName).classList.add("active-tab");
-          event.currentTarget.classList.add("active");
+        var i;
+        var x = document.getElementsByClassName("contents");
+        var tabs = document.getElementsByClassName("skill-ed");
+        for (i = 0; i < x.length; i++) {
+          x[i].classList.remove("active-tab");
+        }
+        for (i = 0; i < tabs.length; i++) {
+          tabs[i].classList.remove("active");
+        }
+        document.getElementById(tabName).classList.add("active-tab");
+        event.currentTarget.classList.add("active");
       }
-  </script>
+    </script>
 
     <!--------------------- Github stats ----------------------->
     <div class="" id="github">
@@ -210,6 +210,131 @@
       <div class="container">
         <h1 class="sub-title">My Projects</h1>
         <div class="project-list">
+          <!--------------------- Fourth Project ----------------------->
+
+          <div class="work project-card">
+            <div id="project_Image">
+              <img src="assets/chatbot_flow_homepage.png" />
+            </div>
+            <div class="layer">
+              <h2 class="project-heading project-title">
+                Chatbot flow builder
+              </h2>
+
+              <p class="project-description">
+                A React-based chatbot flow builder using React Flow library for
+                visually designing chatbot conversation flows. <br />
+                <br />It offers drag-and-drop functionality, customizable nodes,
+                and easy saving/loading of flows. <br /><br />
+                Individual project created in 3 days.
+              </p>
+
+              <p>
+                <span class="tech-stack project-tech-stack">Tech Stack : </span>
+                HTML | CSS | JavaScript |React | React Flow library
+              </p>
+              <div>
+                <a
+                  href="https://github.com/Mohammmedrafique/Chatbot-flow-builder"
+                  target="_blank"
+                  class="project-github-link"
+                  >Github</a
+                >
+                <a
+                  href="https://chatbot-flow-builder-seven-eta.vercel.app/"
+                  target="_blank"
+                  class="project-deployed-link"
+                  >Live</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!--------------------- Fifth Project ----------------------->
+
+          <div class="work project-card">
+            <div id="project_Image">
+              <img src="assets/masai_homepage.png" />
+            </div>
+            <div class="layer">
+              <h2 class="project-heading project-title">
+                Full-Stack Blog Application
+              </h2>
+
+              <p class="project-description">
+                it is a full-featured blog platform using the MERN stack
+                (MongoDB, Express.js, React.js, Node.js). <br />
+                <br />
+                Users can register, create, edit, delete, view posts, comment,
+                and like posts, offering an interactive blogging experience.
+                <br />
+                <br />
+                Individual project created in 3 days.
+              </p>
+              <p>
+                <span class="tech-stack project-tech-stack">Tech Stack : </span>
+                JavaScript | Nodejs | Expressjs | React | MongoDB | HTML | CSS |
+                JavaScript
+              </p>
+              <div>
+                <a
+                  href="https://github.com/Mohammmedrafique/Blog_web_app"
+                  target="_blank"
+                  class="project-github-link"
+                  >Github</a
+                >
+                <a
+                  href="https://blog-web-app-qbvk.vercel.app/"
+                  target="_blank"
+                  class="project-deployed-link"
+                  >Live</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!--------------------- Six Project ----------------------->
+
+          <div class="work project-card">
+            <div id="project_Image">
+              <img src="assets/task_homepage.png" />
+            </div>
+            <div class="layer">
+              <h2 class="project-heading project-title">
+                Full stack Task manager Application
+              </h2>
+
+              <p class="project-description">
+                it is a full-featured Task platform using the MERN stack
+                (MongoDB, Express.js, React.js, Node.js). <br />
+                <br />
+                Users can register, create, edit, delete, view posts, offering
+                an interactive task manage experience.
+                <br />
+                <br />
+                Individual project created in 3 days.
+              </p>
+              <p>
+                <span class="tech-stack project-tech-stack">Tech Stack : </span>
+                JavaScript | Nodejs | Expressjs | React | MongoDB | HTML | CSS |
+                JavaScript
+              </p>
+              <div>
+                <a
+                  href="https://github.com/Mohammmedrafique/task_manager"
+                  target="_blank"
+                  class="project-github-link"
+                  >Github</a
+                >
+                <a
+                  href="https://task-manager-srex.vercel.app/"
+                  target="_blank"
+                  class="project-deployed-link"
+                  >Live</a
+                >
+              </div>
+            </div>
+          </div>
           <!--------------------- First Project ----------------------->
 
           <div class="work project-card">
@@ -292,9 +417,7 @@
           <div class="work project-card">
             <img src="assets/projectpic/furniturecraft.png" />
             <div class="layer">
-              <h2 class="project-heading project-title">
-                furniture-craft
-              </h2>
+              <h2 class="project-heading project-title">furniture-craft</h2>
               <p class="project-description">
                 Welcome to furniture craft where craftsmanship meets comfort and
                 style. Explore our exquisite collection of handcrafted furniture
@@ -315,87 +438,6 @@
                 >
                 <a
                   href="https://furniture-craft.vercel.app/"
-                  target="_blank"
-                  class="project-deployed-link"
-                  >Live</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!--------------------- Fourth Project ----------------------->
-
-          <div class="work project-card">
-            <div id="project_Image">
-              <img src="assets/chatbot_flow_homepage.png" />
-            </div>
-            <div class="layer">
-              <h2 class="project-heading project-title">
-                Chatbot flow builder
-              </h2>
-
-              <p class="project-description">
-                A React-based chatbot flow builder using React Flow library for
-                visually designing chatbot conversation flows. <br />
-                <br />It offers drag-and-drop functionality, customizable nodes,
-                and easy saving/loading of flows. <br /><br />
-                Individual project created in 3 days.
-              </p>
-
-              <p>
-                <span class="tech-stack project-tech-stack">Tech Stack : </span>
-                HTML | CSS | JavaScript |React | React Flow library 
-              </p>
-              <div>
-                <a
-                  href="https://github.com/Mohammmedrafique/Chatbot-flow-builder"
-                  target="_blank"
-                  class="project-github-link"
-                  >Github</a
-                >
-                <a
-                  href="https://chatbot-flow-builder-seven-eta.vercel.app/"
-                  target="_blank"
-                  class="project-deployed-link"
-                  >Live</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!--------------------- Fifth Project ----------------------->
-
-          <div class="work project-card">
-            <div id="project_Image">
-              <img src="assets/masai_homepage.png" />
-            </div>
-            <div class="layer">
-              <h2 class="project-heading project-title">
-                Full-Stack Blog Application
-              </h2>
-
-              <p class="project-description">
-                it is a full-featured blog platform using the MERN stack
-                (MongoDB, Express.js, React.js, Node.js). <br /> <br>
-                Users can register, create, edit, delete, view posts, comment,
-                and like posts, offering an interactive blogging experience.
-                <br /> <br>
-                Individual project created in 3 days.
-              </p>
-              <p>
-                <span class="tech-stack project-tech-stack">Tech Stack : </span>
-                JavaScript | Nodejs | Expressjs | React | MongoDB | HTML | CSS |
-                JavaScript
-              </p>
-              <div>
-                <a
-                  href="https://github.com/Mohammmedrafique/Blog_web_app"
-                  target="_blank"
-                  class="project-github-link"
-                  >Github</a
-                >
-                <a
-                  href="https://blog-web-app-qbvk.vercel.app/"
                   target="_blank"
                   class="project-deployed-link"
                   >Live</a

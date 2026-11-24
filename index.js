@@ -133,10 +133,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const typingElement = document.getElementById("typing-text");
   if (typingElement) {
     const roles = [
-      "Full Stack MERN Developer",
-      "Software Engineer at Schoollog",
-      "2.5+ Years Experience",
-      "React & Node.js Specialist",
+      "Gen AI Full Stack Developer",
+      "SDE-1 at Schoollog",
+      "2.5+ Years Production Experience",
+      "MERN Stack & Generative AI",
+      "Building AI-Powered Web Apps",
     ];
 
     let roleIndex = 0;

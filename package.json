@@ -3,8 +3,8 @@
   "version": "2.5.0",
   "description": "Professional Portfolio for Mohammed Rafique - Full Stack MERN Developer (2.5+ Years Experience)",
   "scripts": {
-    "dev": "npx serve .",
-    "build:css": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
+    "start": "npx serve .",
+    "dev": "npx serve ."
   },
   "keywords": [
     "portfolio",

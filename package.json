@@ -1,6 +1,19 @@
 {
-  "dependencies": {
-    "github-calendar": "^2.3.2",
-    "react-github-calender": "^1.1.0"
-  }
+  "name": "mohammed-rafique-portfolio",
+  "version": "2.5.0",
+  "description": "Professional Portfolio for Mohammed Rafique - Full Stack MERN Developer (2.5+ Years Experience)",
+  "scripts": {
+    "dev": "npx serve .",
+    "build:css": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
+  },
+  "keywords": [
+    "portfolio",
+    "full-stack-developer",
+    "mern-stack",
+    "react",
+    "tailwindcss",
+    "node.js"
+  ],
+  "author": "Mohammed Rafique",
+  "license": "MIT"
 }

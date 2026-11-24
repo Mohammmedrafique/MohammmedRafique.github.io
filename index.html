@@ -1,516 +1,1096 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mohammed Rafique Portfolio</title>
-    <link rel="stylesheet" href="./index.css" />
-    <link rel="stylesheet" href="github.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
-    <script
-      src="https://kit.fontawesome.com/71a9c32d59.js"
-      crossorigin="anonymous"
-    ></script>
+    <meta name="color-scheme" content="light dark" />
+    <title>Mohammed Rafique | Full Stack Developer (2.5+ Years Exp)</title>
+    <meta
+      name="description"
+      content="Mohammed Rafique - Full Stack Web Developer at Schoollog with 2.5+ years of experience in React, Node.js, Express, and MongoDB."
+    />
+    <meta name="author" content="Mohammed Rafique" />
 
+    <!-- Favicon -->
     <link
       rel="shortcut icon"
       href="./assets/portfolio-favicon.png"
       type="image/x-icon"
     />
 
-    <link rel="stylesheet" href="./img.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS (Play CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["'Plus Jakarta Sans'", "system-ui", "-apple-system", "sans-serif"],
+              mono: ["'JetBrains Mono'", "monospace"],
+            },
+            colors: {
+              accent: {
+                DEFAULT: "#3b82f6",
+                hover: "#2563eb",
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="./index.css" />
   </head>
 
-  <body>
-    <div id="header">
-      <div id="home">
-        <nav id="nav-menu">
-          <a href="#header">
-            <h1 class="logo">
-              <div>
-                <img
-                  src="./assets/pic2.jpg"
-                  style="width: 50px; border-radius: 50%"
-                />
-              </div>
-            </h1>
-          </a>
-          <ul id="sidemenu">
-            <li><a href="#header" class="nav-link home">Home</a></li>
-            <li><a href="#about" class="nav-link about">About</a></li>
-            <li><a href="#skills" class="nav-link skills">Skills</a></li>
-            <li><a href="#github">Github</a></li>
-            <li><a href="#projects" class="nav-link projects">Projects</a></li>
-            <li><a href="#contact" class="nav-link contact">Contact</a></li>
-            <li>
-              <button id="resume-button-1">
-                <a
-                  id="resume-link-1"
-                  href="assets/Mohammed-Rafique-Resume.pdf"
-                  target="_blank"
-                  class="nav-link resume"
-                  download
-                  >Resume <i class="fa-solid fa-download"></i
-                ></a>
-              </button>
-            </li>
-            <i class="fas fa-xmark" onclick="closemenu()"></i>
+  <body class="bg-white dark:bg-[#0b0d11] text-slate-800 dark:text-slate-200 font-sans antialiased selection:bg-blue-600 selection:text-white transition-colors duration-200 min-h-screen flex flex-col">
+    <!-- Top Progress Bar -->
+    <div id="scroll-progress" aria-hidden="true"></div>
+
+    <!-- ======================================================================
+         1. Navigation Header
+         ====================================================================== -->
+    <header class="w-full sticky top-0 z-40 backdrop-blur-md bg-white/95 dark:bg-[#0b0d11]/95 border-b border-slate-200 dark:border-slate-800/80 transition-colors" id="header">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+        <!-- Logo / Name -->
+        <a href="#home" class="flex items-center gap-3 group" aria-label="Mohammed Rafique Homepage">
+          <img
+            src="./assets/pic2.jpg"
+            alt="Mohammed Rafique avatar"
+            class="w-9 h-9 rounded-full object-cover border border-slate-300 dark:border-slate-700"
+            width="36"
+            height="36"
+          />
+          <div class="flex flex-col">
+            <span class="font-bold text-sm text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors" id="user-detail-name">
+              Mohammed Rafique
+            </span>
+            <span class="text-[11px] text-slate-500 dark:text-slate-400">
+              Full Stack Developer
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center" id="nav-menu" aria-label="Primary navigation">
+          <ul class="flex items-center gap-1 text-sm font-medium">
+            <li><a href="#home" class="nav-link px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-colors" aria-current="true">Home</a></li>
+            <li><a href="#about" class="nav-link px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-colors">About</a></li>
+            <li><a href="#experience" class="nav-link px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-colors">Experience</a></li>
+            <li><a href="#projects" class="nav-link px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-colors">Projects</a></li>
+            <li><a href="#skills" class="nav-link px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-colors">Skills</a></li>
+            <li><a href="#github" class="nav-link px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-colors">GitHub</a></li>
+            <li><a href="#contact" class="nav-link px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-colors">Contact</a></li>
           </ul>
-          <i class="fas fa-bars" onclick="openmenu()"></i>
         </nav>
 
-        <div class="header-text">
-          <p>Full Stack MERN Developer</p>
-          <div id="type_div">
-            <h1>
-              Hi, I'm
-              <span class="typing" id="user-detail-name">Mohammed Rafique</span
-              ><br />
-              From Rajasthan, India
-            </h1>
-          </div>
-          <button id="resume-button-2">
-            <a
-              id="resume-link-2"
-              href="assets/Mohammed-Rafique-Resume.pdf"
-              target="_blank"
-              class="btn"
-              download
-              >Resume</a
-            >
+        <!-- Right Controls -->
+        <div class="flex items-center gap-2">
+          <!-- Theme Toggle Button -->
+          <button
+            id="theme-toggle"
+            class="w-9 h-9 rounded-lg flex items-center justify-center border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-colors"
+            type="button"
+            aria-label="Toggle theme"
+            title="Toggle theme"
+          >
+            <!-- Sun Icon -->
+            <svg class="w-4 h-4 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+            <!-- Moon Icon -->
+            <svg class="w-4 h-4 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+          </button>
+
+          <!-- Resume Link -->
+          <a
+            id="resume-link-1"
+            href="assets/Mohammed-Rafique-Resume.pdf"
+            class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-blue-600 hover:bg-blue-700 text-white transition-colors"
+            target="_blank"
+            rel="noopener noreferrer"
+            download="Mohammed-Rafique-Resume.pdf"
+          >
+            <span>Resume</span>
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          </a>
+
+          <!-- Mobile Menu Trigger -->
+          <button
+            class="md:hidden w-9 h-9 rounded-lg flex items-center justify-center border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300"
+            type="button"
+            popovertarget="mobile-drawer"
+            popovertargetaction="toggle"
+            aria-controls="mobile-drawer"
+            aria-label="Open menu"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
           </button>
         </div>
       </div>
-    </div>
+    </header>
 
-    <div id="about" class="about section">
-      <div class="container">
-        <div class="row">
-          <div class="about-col-1">
-            <img src="./assets/pic.jpg" class="home-img" />
-          </div>
-          <div class="about-col-2">
-            <h1 class="sub-title">About Me</h1>
-            <p id="user-detail-intro">
-              Highly motivated and skilled Full Stack Developer with a strong
-              foundation in console-based projects and leadership experience.
-              Proficient in HTML, CSS, Javascript, Nodejs, Expressjs, React, and
-              tailwind. Proven problem-solving abilities and a result-oriented
-              approach, ready to contribute to impactful software development
-              projects.
-            </p>
-            <br />
-            <p>
-              Drop a mail @
-              <a href="mailto:Kota.mohdrafiq@gmail.com" style="color: yellow"
-                >Kota.mohdrafiq@gmail.com</a
-              >
-            </p>
-            <div class="details">
-              <p class="skill-ed active" onclick="opentab('Skills')">
-                Soft Skills
+    <main class="w-full flex-grow" id="main-content">
+      <!-- ======================================================================
+           2. Hero Section
+           ====================================================================== -->
+      <section id="home" class="w-full py-16 sm:py-24 border-b border-slate-200 dark:border-slate-800/80">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
+            <!-- Left Column: Copy & Actions -->
+            <div class="md:col-span-8 flex flex-col items-start">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-blue-400 border border-blue-200 dark:border-blue-800/80 mb-5">
+                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                <span>Software Engineer at Schoollog • 2.5+ Years Exp</span>
+              </div>
+
+              <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white tracking-tight mb-3">
+                Mohammed Rafique
+              </h1>
+
+              <div class="text-lg sm:text-xl font-semibold text-slate-700 dark:text-slate-300 mb-5 min-h-[1.75rem]">
+                <span class="typing-cursor text-blue-600 dark:text-blue-400" id="typing-text">Full Stack MERN Developer</span>
+              </div>
+
+              <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm sm:text-base max-w-xl mb-8" id="user-detail-intro">
+                Software Engineer based in Rajasthan, India, with over 2.5 years of experience building production web applications. Specializing in the MERN stack (MongoDB, Express, React, Node.js), scalable RESTful APIs, and responsive, accessible user interfaces.
               </p>
-              <p class="skill-ed" onclick="opentab('Education')">Education</p>
+
+              <!-- Action Buttons -->
+              <div class="flex flex-wrap items-center gap-3">
+                <a
+                  href="#projects"
+                  class="px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold bg-blue-600 hover:bg-blue-700 text-white transition-colors"
+                >
+                  View Projects
+                </a>
+                <a
+                  href="assets/Mohammed-Rafique-Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold border border-slate-300 dark:border-slate-700 hover:border-slate-400 dark:hover:border-slate-500 text-slate-800 dark:text-slate-200 transition-colors"
+                >
+                  Download Resume
+                </a>
+                <a
+                  href="#contact"
+                  class="px-5 py-2.5 rounded-lg text-xs sm:text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"
+                >
+                  Contact Me →
+                </a>
+              </div>
+
+              <!-- Social Links Strip -->
+              <div class="flex items-center gap-5 mt-8 pt-6 border-t border-slate-100 dark:border-slate-800/80 w-full">
+                <a
+                  href="https://github.com/Mohammmedrafique"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-xs font-medium text-slate-500 hover:text-slate-900 dark:hover:text-white flex items-center gap-1.5 transition-colors"
+                >
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                  <span>GitHub</span>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/mohammed-rafique-283501113/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-xs font-medium text-slate-500 hover:text-slate-900 dark:hover:text-white flex items-center gap-1.5 transition-colors"
+                >
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                  <span>LinkedIn</span>
+                </a>
+                <a
+                  href="mailto:Kota.mohdrafiq@gmail.com"
+                  class="text-xs font-medium text-slate-500 hover:text-slate-900 dark:hover:text-white flex items-center gap-1.5 transition-colors"
+                >
+                  <svg class="w-4 h-4 fill-none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                  <span>Kota.mohdrafiq@gmail.com</span>
+                </a>
+              </div>
             </div>
 
-            <div class="contents active-tab" id="Skills">
-              <ul>
-                <li><span>Teamwork</span></li>
-                <li><span>Problem Solving</span></li>
-                <li><span>Positivity</span></li>
-                <li><span>Adaptability</span></li>
-                <li><span>Remote work and Online Collaboration</span></li>
-              </ul>
-            </div>
-            <div class="contents" id="Education">
-              <ul>
-                <li>
-                  <span>Full Stack Developer</span><br />Masai School,
-                  Bangalore<br />December 2022 - Present
-                </li>
-                <li>
-                  <span>Bachelor of technology</span><br />Rajasthan Technical
-                  University, kota<br />May 2021
-                </li>
-              </ul>
+            <!-- Right Column: Profile Picture -->
+            <div class="md:col-span-4 flex justify-center md:justify-end">
+              <div class="w-52 h-64 sm:w-60 sm:h-72 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-md bg-slate-100 dark:bg-slate-900">
+                <img
+                  src="./assets/pic.jpg"
+                  alt="Mohammed Rafique"
+                  class="w-full h-full object-cover"
+                  width="240"
+                  height="288"
+                  loading="eager"
+                />
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div id="skills" class="container">
-      <h1 class="sub-title">Technical Skills</h1>
-      <div id="skill_container"></div>
-    </div>
-    <script>
-      function opentab(tabName) {
-        var i;
-        var x = document.getElementsByClassName("contents");
-        var tabs = document.getElementsByClassName("skill-ed");
-        for (i = 0; i < x.length; i++) {
-          x[i].classList.remove("active-tab");
-        }
-        for (i = 0; i < tabs.length; i++) {
-          tabs[i].classList.remove("active");
-        }
-        document.getElementById(tabName).classList.add("active-tab");
-        event.currentTarget.classList.add("active");
-      }
-    </script>
-
-    <!--------------------- Github stats ----------------------->
-    <div class="" id="github">
-      <h2 class="section-title">GitHub Skills</h2>
-      <section class="container-git" id="github">
-        <!-- Git Status -->
-
-        <div>
-          <img
-            id="github-streak-stats"
-            src="https://github-readme-streak-stats.herokuapp.com?user=Mohammmedrafique"
-            alt="Mohammmedrafique"
-            style="max-width: 100%; height: auto"
-          />
-        </div>
-
-        <div>
-          <img
-            id="github-top-langs"
-            src="https://github-readme-stats.vercel.app/api/top-langs/?username=mohammmedrafique&custom_title=Most_language_Used&theme=radical&show_icons=true&locale=en&layout=compact"
-            alt="mohammmedrafique"
-            style="max-width: 100%; height: auto"
-          />
-        </div>
-
-        <div>
-          <img
-            id="github-stats-card"
-            src="https://github-readme-stats.vercel.app/api?username=mohammmedrafique&theme=radical&show_icons=true&locale=en"
-            alt="clrsurya11"
-            style="max-width: 100%; height: auto"
-          />
         </div>
       </section>
-      <div class="git-stat-div react-activity-calendar">
-        <!-- Prepare a container for your calendar. -->
-        <h2 class="section-title">GitHub Calendar</h2>
-        <div class="calendar">
-          <!-- Loading stuff -->
-          <img
-            src="https://ghchart.rshah.org/Mohammmedrafique"
-            alt="Mohammmedrafique's Github chart"
-            class="github-chart"
-          />
-        </div>
-      </div>
-    </div>
 
-    <div id="projects">
-      <div class="container">
-        <h1 class="sub-title">My Projects</h1>
-        <div class="project-list">
-          <!--------------------- Fourth Project ----------------------->
+      <!-- ======================================================================
+           3. About Section
+           ====================================================================== -->
+      <section id="about" class="w-full py-16 sm:py-20 border-b border-slate-200 dark:border-slate-800/80">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="mb-8">
+            <h2 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">About Me</h2>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Background, professional trajectory, and engineering approach.</p>
+          </div>
 
-          <div class="work project-card">
-            <div id="project_Image">
-              <img src="assets/chatbot_flow_homepage.png" />
-            </div>
-            <div class="layer">
-              <h2 class="project-heading project-title">
-                Chatbot flow builder
-              </h2>
-
-              <p class="project-description">
-                A React-based chatbot flow builder using React Flow library for
-                visually designing chatbot conversation flows. <br />
-                <br />It offers drag-and-drop functionality, customizable nodes,
-                and easy saving/loading of flows. <br /><br />
-                Individual project created in 3 days.
-              </p>
-
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="md:col-span-2 space-y-4 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
               <p>
-                <span class="tech-stack project-tech-stack">Tech Stack : </span>
-                HTML | CSS | JavaScript |React | React Flow library
+                I am a Full Stack Developer with <strong>2.5+ years of software engineering experience</strong>. Currently, I work at <strong>Schoollog</strong>, an EdTech SaaS company, where I engineer features across our school management ERP and web operating systems.
               </p>
+              <p>
+                My path into software development was anchored by an engineering degree (B.Tech from Rajasthan Technical University) followed by an intensive 1,200+ hour full-stack development apprenticeship at Masai School. This combination gave me both strong algorithmic problem-solving foundations and hands-on production experience.
+              </p>
+              <p>
+                I take pride in writing clean, modular code, optimizing web application performance (Core Web Vitals), designing well-documented REST APIs, and working closely with cross-functional product teams.
+              </p>
+            </div>
+
+            <!-- Quick Facts Card -->
+            <div class="rounded-xl border border-slate-200 dark:border-slate-800 p-5 bg-slate-50/50 dark:bg-slate-900/40 text-xs sm:text-sm space-y-3">
               <div>
-                <a
-                  href="https://github.com/Mohammmedrafique/Chatbot-flow-builder"
-                  target="_blank"
-                  class="project-github-link"
-                  >Github</a
-                >
+                <span class="block text-slate-400 text-[11px] font-semibold uppercase tracking-wider">Current Role</span>
+                <span class="font-medium text-slate-900 dark:text-white">Software Engineer at Schoollog</span>
+              </div>
+              <div>
+                <span class="block text-slate-400 text-[11px] font-semibold uppercase tracking-wider">Location</span>
+                <span class="font-medium text-slate-900 dark:text-white">Rajasthan, India</span>
+              </div>
+              <div>
+                <span class="block text-slate-400 text-[11px] font-semibold uppercase tracking-wider">Education</span>
+                <span class="font-medium text-slate-900 dark:text-white">B.Tech, RTU Kota</span>
+              </div>
+              <div>
+                <span class="block text-slate-400 text-[11px] font-semibold uppercase tracking-wider">Core Stack</span>
+                <span class="font-medium text-slate-900 dark:text-white">React, Node.js, Express, MongoDB</span>
+              </div>
+              <div>
+                <span class="block text-slate-400 text-[11px] font-semibold uppercase tracking-wider">Certifications</span>
+                <span class="font-medium text-slate-900 dark:text-white">SEO Mastery Pro Certification</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           4. Experience Section
+           ====================================================================== -->
+      <section id="experience" class="w-full py-16 sm:py-20 border-b border-slate-200 dark:border-slate-800/80">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="mb-10">
+            <h2 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">Work Experience</h2>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">2.5+ years of building software in professional and team environments.</p>
+          </div>
+
+          <div class="space-y-8 relative pl-6 before:absolute before:left-2 before:top-2 before:bottom-2 before:w-px before:bg-slate-200 dark:before:bg-slate-800">
+            <!-- Position 1: Schoollog -->
+            <div class="relative group">
+              <div class="absolute -left-6 top-1.5 w-4 h-4 rounded-full bg-blue-600 ring-4 ring-white dark:ring-[#0b0d11]"></div>
+              <div class="rounded-xl border border-slate-200 dark:border-slate-800/80 p-5 sm:p-6 bg-white dark:bg-slate-900/40">
+                <div class="flex flex-wrap items-center justify-between gap-1 mb-2">
+                  <div>
+                    <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white">Full Stack Web Developer</h3>
+                    <span class="text-xs sm:text-sm font-semibold text-blue-600 dark:text-blue-400">Schoollog (EdTech SaaS)</span>
+                  </div>
+                  <span class="text-xs font-mono text-slate-500 dark:text-slate-400">2023 – Present (2.5+ Years)</span>
+                </div>
+                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-3">
+                  Building and maintaining core full-stack features for Schoollog's school ERP ecosystem, serving schools, teachers, and parents with daily administrative, fee, and communication tools.
+                </p>
+                <ul class="space-y-1.5 text-xs sm:text-sm text-slate-600 dark:text-slate-300 list-disc list-inside mb-4">
+                  <li>Architected responsive dashboard modules in React.js, reducing page load times and optimizing rendering performance.</li>
+                  <li>Engineered secure RESTful endpoints in Node.js and Express with JWT authentication and role-based permissions.</li>
+                  <li>Designed MongoDB schemas and query aggregations for attendance, student records, and fee collections.</li>
+                  <li>Collaborated in weekly Agile sprints, code reviews, and production releases.</li>
+                </ul>
+                <div class="flex flex-wrap gap-1.5 text-[11px] font-mono">
+                  <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">React.js</span>
+                  <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Node.js</span>
+                  <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Express.js</span>
+                  <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">MongoDB</span>
+                  <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">REST APIs</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Position 2: Masai School -->
+            <div class="relative group">
+              <div class="absolute -left-6 top-1.5 w-4 h-4 rounded-full bg-slate-400 dark:bg-slate-600 ring-4 ring-white dark:ring-[#0b0d11]"></div>
+              <div class="rounded-xl border border-slate-200 dark:border-slate-800/80 p-5 sm:p-6 bg-white dark:bg-slate-900/40">
+                <div class="flex flex-wrap items-center justify-between gap-1 mb-2">
+                  <div>
+                    <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white">Full Stack Web Development Apprenticeship</h3>
+                    <span class="text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-300">Masai School • Bengaluru</span>
+                  </div>
+                  <span class="text-xs font-mono text-slate-500 dark:text-slate-400">Dec 2022 – 2023</span>
+                </div>
+                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-3">
+                  Completed 1,200+ hours of full-time immersive programming curriculum covering Data Structures and Algorithms, modern JavaScript, and the MERN stack.
+                </p>
+                <ul class="space-y-1.5 text-xs sm:text-sm text-slate-600 dark:text-slate-300 list-disc list-inside mb-4">
+                  <li>Built 6+ major individual and collaborative team applications within strict deadlines.</li>
+                  <li>Practiced Git branching workflows, peer code reviews, and remote team communication.</li>
+                  <li>Received the Collaborative Project Success Award for team contributions.</li>
+                </ul>
+                <div class="flex flex-wrap gap-1.5 text-[11px] font-mono">
+                  <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">MERN Stack</span>
+                  <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">DSA</span>
+                  <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">JavaScript</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Position 3: Freelance -->
+            <div class="relative group">
+              <div class="absolute -left-6 top-1.5 w-4 h-4 rounded-full bg-slate-400 dark:bg-slate-600 ring-4 ring-white dark:ring-[#0b0d11]"></div>
+              <div class="rounded-xl border border-slate-200 dark:border-slate-800/80 p-5 sm:p-6 bg-white dark:bg-slate-900/40">
+                <div class="flex flex-wrap items-center justify-between gap-1 mb-2">
+                  <div>
+                    <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white">Freelance SEO & Web Optimization Specialist</h3>
+                    <span class="text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-300">Self-Employed</span>
+                  </div>
+                  <span class="text-xs font-mono text-slate-500 dark:text-slate-400">Jan 2020 – Nov 2022</span>
+                </div>
+                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-3">
+                  Conducted technical SEO audits, site performance optimizations, and analytics reporting for web clients to maximize organic discoverability.
+                </p>
+                <div class="flex flex-wrap gap-1.5 text-[11px] font-mono">
+                  <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Technical SEO</span>
+                  <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Google Analytics</span>
+                  <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">CRO</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Position 4: RTU Kota -->
+            <div class="relative group">
+              <div class="absolute -left-6 top-1.5 w-4 h-4 rounded-full bg-slate-300 dark:bg-slate-700 ring-4 ring-white dark:ring-[#0b0d11]"></div>
+              <div class="rounded-xl border border-slate-200 dark:border-slate-800/80 p-5 sm:p-6 bg-white dark:bg-slate-900/40">
+                <div class="flex flex-wrap items-center justify-between gap-1 mb-1">
+                  <div>
+                    <h3 class="text-base font-bold text-slate-900 dark:text-white">Bachelor of Technology (B.Tech) - Civil Engineering</h3>
+                    <span class="text-xs sm:text-sm text-slate-600 dark:text-slate-400">Rajasthan Technical University (RTU), Kota</span>
+                  </div>
+                  <span class="text-xs font-mono text-slate-500 dark:text-slate-400">2016 – 2021</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           5. Projects Section
+           ====================================================================== -->
+      <section id="projects" class="w-full py-16 sm:py-20 border-b border-slate-200 dark:border-slate-800/80">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+            <div>
+              <h2 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">Featured Projects</h2>
+              <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Applications built with modern frontend and backend technologies.</p>
+            </div>
+
+            <!-- Project Filter Controls -->
+            <div class="flex flex-wrap gap-1.5 projects-filter-nav" role="tablist" aria-label="Projects filter">
+              <button class="filter-btn active px-3 py-1 rounded-md text-xs font-semibold bg-blue-600 text-white transition-colors" data-project-filter="all" type="button" role="tab" aria-selected="true">All</button>
+              <button class="filter-btn px-3 py-1 rounded-md text-xs font-medium border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors" data-project-filter="fullstack" type="button" role="tab" aria-selected="false">Full Stack</button>
+              <button class="filter-btn px-3 py-1 rounded-md text-xs font-medium border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors" data-project-filter="frontend" type="button" role="tab" aria-selected="false">Frontend</button>
+              <button class="filter-btn px-3 py-1 rounded-md text-xs font-medium border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors" data-project-filter="ai" type="button" role="tab" aria-selected="false">AI</button>
+              <button class="filter-btn px-3 py-1 rounded-md text-xs font-medium border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors" data-project-filter="ecommerce" type="button" role="tab" aria-selected="false">E-Commerce</button>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 projects-grid">
+            <!-- Project 1: Chatbot Flow Builder -->
+            <article class="project-card border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden bg-white dark:bg-slate-900/40 flex flex-col justify-between" data-project-cat="frontend">
+              <div>
+                <div class="w-full aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-800">
+                  <img
+                    src="assets/chatbot_flow_homepage.png"
+                    alt="Chatbot flow builder interface"
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="p-5">
+                  <h3 class="font-bold text-base text-slate-900 dark:text-white mb-1.5">Chatbot Flow Builder</h3>
+                  <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+                    Visual node-based chatbot flow designer built using React Flow. Enables drag-and-drop conversation building, custom branch handles, and JSON flow export.
+                  </p>
+                  <div class="flex flex-wrap gap-1 text-[11px] font-mono text-slate-500 dark:text-slate-400 mb-4">
+                    <span>React.js</span> • <span>React Flow</span> • <span>Vite</span>
+                  </div>
+                </div>
+              </div>
+              <div class="px-5 pb-5 pt-0 flex items-center gap-3">
                 <a
                   href="https://chatbot-flow-builder-seven-eta.vercel.app/"
                   target="_blank"
-                  class="project-deployed-link"
-                  >Live</a
+                  rel="noopener noreferrer"
+                  class="text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1"
                 >
-              </div>
-            </div>
-          </div>
-
-          <!--------------------- Fifth Project ----------------------->
-
-          <div class="work project-card">
-            <div id="project_Image">
-              <img src="assets/masai_homepage.png" />
-            </div>
-            <div class="layer">
-              <h2 class="project-heading project-title">
-                Full-Stack Blog Application
-              </h2>
-
-              <p class="project-description">
-                it is a full-featured blog platform using the MERN stack
-                (MongoDB, Express.js, React.js, Node.js). <br />
-                <br />
-                Users can register, create, edit, delete, view posts, comment,
-                and like posts, offering an interactive blogging experience.
-                <br />
-                <br />
-                Individual project created in 3 days.
-              </p>
-              <p>
-                <span class="tech-stack project-tech-stack">Tech Stack : </span>
-                JavaScript | Nodejs | Expressjs | React | MongoDB | HTML | CSS |
-                JavaScript
-              </p>
-              <div>
+                  <span>Live Demo</span> →
+                </a>
                 <a
-                  href="https://github.com/Mohammmedrafique/Blog_web_app"
+                  href="https://github.com/Mohammmedrafique/Chatbot-flow-builder"
                   target="_blank"
-                  class="project-github-link"
-                  >Github</a
+                  rel="noopener noreferrer"
+                  class="text-xs font-medium text-slate-500 hover:text-slate-900 dark:hover:text-white"
                 >
+                  GitHub Code
+                </a>
+              </div>
+            </article>
+
+            <!-- Project 2: AI Virtual Interview Assistant -->
+            <article class="project-card border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden bg-white dark:bg-slate-900/40 flex flex-col justify-between" data-project-cat="ai">
+              <div>
+                <div class="w-full aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-800">
+                  <img
+                    src="assets/Student.png"
+                    alt="AI Virtual Interview Assistant"
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="p-5">
+                  <h3 class="font-bold text-base text-slate-900 dark:text-white mb-1.5">AI Virtual Interview Assistant</h3>
+                  <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+                    Virtual interview assistant simulating real technical interview scenarios. Uses OpenAI API and natural language processing to evaluate responses and provide feedback.
+                  </p>
+                  <div class="flex flex-wrap gap-1 text-[11px] font-mono text-slate-500 dark:text-slate-400 mb-4">
+                    <span>React</span> • <span>Node.js</span> • <span>OpenAI API</span>
+                  </div>
+                </div>
+              </div>
+              <div class="px-5 pb-5 pt-0 flex items-center gap-3">
+                <a
+                  href="https://github.com/Mohammmedrafique"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1"
+                >
+                  <span>View Details</span> →
+                </a>
+                <a
+                  href="https://github.com/Mohammmedrafique"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-xs font-medium text-slate-500 hover:text-slate-900 dark:hover:text-white"
+                >
+                  GitHub Code
+                </a>
+              </div>
+            </article>
+
+            <!-- Project 3: Full-Stack Blog Platform -->
+            <article class="project-card border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden bg-white dark:bg-slate-900/40 flex flex-col justify-between" data-project-cat="fullstack">
+              <div>
+                <div class="w-full aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-800">
+                  <img
+                    src="assets/masai_homepage.png"
+                    alt="Full-Stack Blog application screenshot"
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="p-5">
+                  <h3 class="font-bold text-base text-slate-900 dark:text-white mb-1.5">Full-Stack Blog Platform</h3>
+                  <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+                    Blogging application built with MongoDB, Express, React, and Node.js. Includes JWT user authentication, article management, comments, and post likes.
+                  </p>
+                  <div class="flex flex-wrap gap-1 text-[11px] font-mono text-slate-500 dark:text-slate-400 mb-4">
+                    <span>MongoDB</span> • <span>Express</span> • <span>React</span> • <span>Node.js</span>
+                  </div>
+                </div>
+              </div>
+              <div class="px-5 pb-5 pt-0 flex items-center gap-3">
                 <a
                   href="https://blog-web-app-qbvk.vercel.app/"
                   target="_blank"
-                  class="project-deployed-link"
-                  >Live</a
+                  rel="noopener noreferrer"
+                  class="text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1"
                 >
-              </div>
-            </div>
-          </div>
-
-          <!--------------------- Six Project ----------------------->
-
-          <div class="work project-card">
-            <div id="project_Image">
-              <img src="assets/task_homepage.png" />
-            </div>
-            <div class="layer">
-              <h2 class="project-heading project-title">
-                Full stack Task manager Application
-              </h2>
-
-              <p class="project-description">
-                it is a full-featured Task platform using the MERN stack
-                (MongoDB, Express.js, React.js, Node.js). <br />
-                <br />
-                Users can register, create, edit, delete, view posts, offering
-                an interactive task manage experience.
-                <br />
-                <br />
-                Individual project created in 3 days.
-              </p>
-              <p>
-                <span class="tech-stack project-tech-stack">Tech Stack : </span>
-                JavaScript | Nodejs | Expressjs | React | MongoDB | HTML | CSS |
-                JavaScript
-              </p>
-              <div>
+                  <span>Live Demo</span> →
+                </a>
                 <a
-                  href="https://github.com/Mohammmedrafique/task_manager"
+                  href="https://github.com/Mohammmedrafique/Blog_web_app"
                   target="_blank"
-                  class="project-github-link"
-                  >Github</a
+                  rel="noopener noreferrer"
+                  class="text-xs font-medium text-slate-500 hover:text-slate-900 dark:hover:text-white"
                 >
+                  GitHub Code
+                </a>
+              </div>
+            </article>
+
+            <!-- Project 4: Full Stack Task Manager -->
+            <article class="project-card border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden bg-white dark:bg-slate-900/40 flex flex-col justify-between" data-project-cat="fullstack">
+              <div>
+                <div class="w-full aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-800">
+                  <img
+                    src="assets/task_homepage.png"
+                    alt="Task Manager application screenshot"
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="p-5">
+                  <h3 class="font-bold text-base text-slate-900 dark:text-white mb-1.5">Full Stack Task Manager</h3>
+                  <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+                    Task workflow tool featuring task creation, status updates, priority sorting, and personal dashboards powered by a MERN backend.
+                  </p>
+                  <div class="flex flex-wrap gap-1 text-[11px] font-mono text-slate-500 dark:text-slate-400 mb-4">
+                    <span>React</span> • <span>Node.js</span> • <span>Express</span> • <span>MongoDB</span>
+                  </div>
+                </div>
+              </div>
+              <div class="px-5 pb-5 pt-0 flex items-center gap-3">
                 <a
                   href="https://task-manager-srex.vercel.app/"
                   target="_blank"
-                  class="project-deployed-link"
-                  >Live</a
+                  rel="noopener noreferrer"
+                  class="text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1"
                 >
+                  <span>Live Demo</span> →
+                </a>
+                <a
+                  href="https://github.com/Mohammmedrafique/task_manager"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-xs font-medium text-slate-500 hover:text-slate-900 dark:hover:text-white"
+                >
+                  GitHub Code
+                </a>
               </div>
-            </div>
-          </div>
-          <!--------------------- First Project ----------------------->
+            </article>
 
-          <div class="work project-card">
-            <div id="project_Image">
-              <img src="assets/projectpic/fastfashion.png" />
-            </div>
-            <div class="layer">
-              <h2 class="project-heading project-title">E-commerce website</h2>
-
-              <p class="project-description">
-                A dynamic e-commerce website built with React, offering a
-                seamless user experience through responsive design and
-                interactive components.<br /><br />
-
-                Group project created in 5 days.
-              </p>
-
-              <p>
-                <span class="tech-stack project-tech-stack">Tech Stack : </span>
-                HTML | CSS | JavaScript | React
-              </p>
+            <!-- Project 5: FurnitureCraft -->
+            <article class="project-card border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden bg-white dark:bg-slate-900/40 flex flex-col justify-between" data-project-cat="ecommerce">
               <div>
-                <a
-                  href="https://github.com/Mohammmedrafique/truculent-face-1803.git"
-                  target="_blank"
-                  class="project-github-link"
-                  >Github</a
-                >
-                <a
-                  href="https://truculent-face-1803-nine.vercel.app/"
-                  target="_blank"
-                  class="project-deployed-link"
-                  >Live</a
-                >
+                <div class="w-full aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-800">
+                  <img
+                    src="assets/projectpic/furniturecraft.png"
+                    alt="FurnitureCraft platform screenshot"
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="p-5">
+                  <h3 class="font-bold text-base text-slate-900 dark:text-white mb-1.5">FurnitureCraft Online Store</h3>
+                  <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+                    Furniture e-commerce store with product category filtering, price range sliders, shopping cart state management, and TypeScript types.
+                  </p>
+                  <div class="flex flex-wrap gap-1 text-[11px] font-mono text-slate-500 dark:text-slate-400 mb-4">
+                    <span>TypeScript</span> • <span>React</span> • <span>Express</span> • <span>MongoDB</span>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-
-          <!--------------------- Second Project ----------------------->
-
-          <div class="work project-card">
-            <div id="project_Image">
-              <img
-                src="assets/projectpic/280637609-37cae2d2-ba2d-49ac-b3fc-1dac772c29d4.png"
-              />
-            </div>
-            <div class="layer">
-              <h2 class="project-heading project-title">Gamify Your Fitness</h2>
-
-              <p class="project-description">
-                Embark on a fitness journey like never before with FitQuest—an
-                immersive platform that blends exciting activities, challenges,
-                and friendly competition. <br /><br />
-                Collaborative project created in 5 days by a team of 4 members.
-              </p>
-
-              <p>
-                <span class="tech-stack project-tech-stack">Tech Stack : </span>
-                HTML | CSS | JavaScript |React | MongoDB | Expressjs | Nodejs
-              </p>
-              <div>
-                <a
-                  href="https://github.com/audacity07/posh-division-4370.git"
-                  target="_blank"
-                  class="project-github-link"
-                  >Github</a
-                >
-                <a
-                  href="https://posh-division-4370.vercel.app/"
-                  target="_blank"
-                  class="project-deployed-link"
-                  >Live</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!--------------------- Third Project ----------------------->
-
-          <div class="work project-card">
-            <img src="assets/projectpic/furniturecraft.png" />
-            <div class="layer">
-              <h2 class="project-heading project-title">furniture-craft</h2>
-              <p class="project-description">
-                Welcome to furniture craft where craftsmanship meets comfort and
-                style. Explore our exquisite collection of handcrafted furniture
-                pieces designed to elevate your living spaces.<br /><br />
-                Individual project created in 7 days.
-              </p>
-              <p>
-                <span class="tech-stack project-tech-stack">Tech Stack : </span>
-                HTML | CSS | JavaScript |React | MongoDB | Expressjs | Nodejs |
-                TypeScript
-              </p>
-              <div>
-                <a
-                  href="https://github.com/Mohammmedrafique/furniture-craft"
-                  target="_blank"
-                  class="project-github-link"
-                  >Github</a
-                >
+              <div class="px-5 pb-5 pt-0 flex items-center gap-3">
                 <a
                   href="https://furniture-craft.vercel.app/"
                   target="_blank"
-                  class="project-deployed-link"
-                  >Live</a
+                  rel="noopener noreferrer"
+                  class="text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1"
                 >
+                  <span>Live Demo</span> →
+                </a>
+                <a
+                  href="https://github.com/Mohammmedrafique/furniture-craft"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-xs font-medium text-slate-500 hover:text-slate-900 dark:hover:text-white"
+                >
+                  GitHub Code
+                </a>
+              </div>
+            </article>
+
+            <!-- Project 6: FitQuest -->
+            <article class="project-card border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden bg-white dark:bg-slate-900/40 flex flex-col justify-between" data-project-cat="fullstack">
+              <div>
+                <div class="w-full aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-800">
+                  <img
+                    src="assets/projectpic/280637609-37cae2d2-ba2d-49ac-b3fc-1dac772c29d4.png"
+                    alt="FitQuest platform screenshot"
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="p-5">
+                  <h3 class="font-bold text-base text-slate-900 dark:text-white mb-1.5">FitQuest - Gamify Fitness</h3>
+                  <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+                    Fitness tracking and gamification platform built in a 4-person Agile sprint. Features challenge tracking, leaderboards, and social progress feeds.
+                  </p>
+                  <div class="flex flex-wrap gap-1 text-[11px] font-mono text-slate-500 dark:text-slate-400 mb-4">
+                    <span>React</span> • <span>Node.js</span> • <span>Express</span> • <span>MongoDB</span>
+                  </div>
+                </div>
+              </div>
+              <div class="px-5 pb-5 pt-0 flex items-center gap-3">
+                <a
+                  href="https://posh-division-4370.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1"
+                >
+                  <span>Live Demo</span> →
+                </a>
+                <a
+                  href="https://github.com/audacity07/posh-division-4370.git"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-xs font-medium text-slate-500 hover:text-slate-900 dark:hover:text-white"
+                >
+                  GitHub Code
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           6. Skills Section
+           ====================================================================== -->
+      <section id="skills" class="w-full py-16 sm:py-20 border-b border-slate-200 dark:border-slate-800/80">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="mb-10">
+            <h2 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">Technical Skills</h2>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Tools and frameworks used across frontend, backend, and databases.</p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Frontend -->
+            <div class="rounded-xl border border-slate-200 dark:border-slate-800 p-5 bg-white dark:bg-slate-900/40">
+              <h3 class="font-bold text-sm text-slate-900 dark:text-white mb-3">Frontend</h3>
+              <ul class="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>React.js / Next.js</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>JavaScript (ES6+)</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>TypeScript</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>HTML5 / Semantic Web</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>CSS3 / Tailwind CSS</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>Redux / Context API</li>
+              </ul>
+            </div>
+
+            <!-- Backend -->
+            <div class="rounded-xl border border-slate-200 dark:border-slate-800 p-5 bg-white dark:bg-slate-900/40">
+              <h3 class="font-bold text-sm text-slate-900 dark:text-white mb-3">Backend & APIs</h3>
+              <ul class="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>Node.js</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>Express.js</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>RESTful API Design</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>JWT Authentication</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>Middleware & Validation</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>Postman / Swagger</li>
+              </ul>
+            </div>
+
+            <!-- Databases & DevOps -->
+            <div class="rounded-xl border border-slate-200 dark:border-slate-800 p-5 bg-white dark:bg-slate-900/40">
+              <h3 class="font-bold text-sm text-slate-900 dark:text-white mb-3">Databases & DevOps</h3>
+              <ul class="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>MongoDB & Mongoose</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>MySQL</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>Git & GitHub</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>Vercel & Netlify</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>Docker basics</li>
+              </ul>
+            </div>
+
+            <!-- Practices -->
+            <div class="rounded-xl border border-slate-200 dark:border-slate-800 p-5 bg-white dark:bg-slate-900/40">
+              <h3 class="font-bold text-sm text-slate-900 dark:text-white mb-3">Practices</h3>
+              <ul class="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>Data Structures & Algorithms</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>Core Web Vitals Optimization</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>Agile / Scrum Sprints</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>Code Reviews & Git Flow</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>Accessibility (a11y)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           7. GitHub Activity Section
+           ====================================================================== -->
+      <section id="github" class="w-full py-16 sm:py-20 border-b border-slate-200 dark:border-slate-800/80">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="mb-8">
+            <h2 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">GitHub Activity</h2>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Open-source contributions and repository metrics.</p>
+          </div>
+
+          <div class="space-y-6">
+            <!-- Calendar -->
+            <div class="rounded-xl border border-slate-200 dark:border-slate-800 p-5 bg-white dark:bg-slate-900/40 text-center">
+              <div class="overflow-x-auto py-2">
+                <img
+                  src="https://ghchart.rshah.org/Mohammmedrafique"
+                  alt="Mohammmedrafique's GitHub contribution chart"
+                  class="mx-auto rounded max-w-full"
+                  loading="lazy"
+                  width="850"
+                  height="125"
+                />
+              </div>
+            </div>
+
+            <!-- Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="rounded-xl border border-slate-200 dark:border-slate-800 p-4 bg-white dark:bg-slate-900/40 flex items-center justify-center">
+                <img
+                  id="github-top-langs"
+                  src="https://github-readme-stats.vercel.app/api/top-langs/?username=mohammmedrafique&custom_title=Top+Languages&theme=radical&show_icons=true&locale=en&layout=compact"
+                  alt="Top Languages"
+                  loading="lazy"
+                  class="max-w-full h-auto"
+                  width="360"
+                  height="180"
+                />
+              </div>
+
+              <div class="rounded-xl border border-slate-200 dark:border-slate-800 p-4 bg-white dark:bg-slate-900/40 flex items-center justify-center">
+                <img
+                  id="github-stats-card"
+                  src="https://github-readme-stats.vercel.app/api?username=mohammmedrafique&theme=radical&show_icons=true&locale=en"
+                  alt="GitHub Overall Stats"
+                  loading="lazy"
+                  class="max-w-full h-auto"
+                  width="360"
+                  height="180"
+                />
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
 
-    <div id="contact">
-      <div class="container">
-        <div class="row">
-          <div class="contact-left">
-            <h1 class="sub-title">Contact Me</h1>
-            <p>
-              <a href="mailto:Kota.mohdrafiq@gmail.com" id="contact-email"
-                ><i class="fa-solid fa-paper-plane"></i>
-                Kota.mohdrafiq@gmail.com</a
-              >
+      <!-- ======================================================================
+           8. Contact Section (Symmetric Dual-Card Layout)
+           ====================================================================== -->
+      <section id="contact" class="w-full py-16 sm:py-24 border-b border-slate-200 dark:border-slate-800/80 bg-slate-50/40 dark:bg-[#0c0e12]/60">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <!-- Section Heading (Balanced & Clean) -->
+          <div class="text-center max-w-xl mx-auto mb-12">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800/60 mb-3">
+              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span>Open to Full-Stack & Engineering Roles</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white tracking-tight">Contact Me</h2>
+            <p class="text-sm text-slate-600 dark:text-slate-400 mt-2">
+              Have an opportunity, project inquiry, or question? Feel free to reach out directly or send a message.
             </p>
-            <p>
-              <a href="" id="contact-phone">
-                <i class="fa-solid fa-square-phone"></i> +91-9829740688</a
-              >
-            </p>
-            <p>
-              <a id="contact-phone">
-                <i class="fa-solid fa-location"></i>Rajasthan, India</a
-              >
-            </p>
-            <div class="social-icons">
-              <a
-                id="contact-linkedin"
-                href="https://www.linkedin.com/in/mohammed-rafique-283501113?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                target="_blank"
-                ><i class="fa-brands fa-linkedin"></i
-              ></a>
-              <a
-                id="contact-github"
-                href="https://github.com/Mohammmedrafique"
-                target="_blank"
-                ><i class="fa-brands fa-github"></i
-              ></a>
+          </div>
+
+          <!-- Dual Symmetrical Cards (Equal Height, Equal Width, Aligned) -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+            <!-- Left Card: Contact Information -->
+            <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/70 p-6 sm:p-8 flex flex-col justify-between shadow-sm">
+              <div>
+                <div class="flex items-center justify-between pb-4 mb-6 border-b border-slate-100 dark:border-slate-800">
+                  <div>
+                    <h3 class="font-bold text-base text-slate-900 dark:text-white">Direct Reach</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Contact me directly via email, phone, or WhatsApp.</p>
+                  </div>
+                  <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">
+                    India (IST)
+                  </span>
+                </div>
+
+                <div class="space-y-3.5">
+                  <!-- Email Box -->
+                  <div class="p-4 rounded-xl border border-slate-200/80 dark:border-slate-800 bg-slate-50/60 dark:bg-slate-800/40 flex items-center justify-between gap-3">
+                    <div class="flex items-center gap-3 min-w-0">
+                      <div class="w-10 h-10 rounded-lg bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 flex items-center justify-center shrink-0">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                      </div>
+                      <div class="min-w-0">
+                        <span class="block text-[11px] font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500">Email Address</span>
+                        <a
+                          href="mailto:Kota.mohdrafiq@gmail.com"
+                          id="contact-email"
+                          class="text-xs sm:text-sm font-semibold text-slate-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors truncate block"
+                        >
+                          Kota.mohdrafiq@gmail.com
+                        </a>
+                      </div>
+                    </div>
+                    <button
+                      type="button"
+                      id="copy-email-btn"
+                      data-email="Kota.mohdrafiq@gmail.com"
+                      class="shrink-0 px-2.5 py-1.5 rounded-md text-xs font-medium border border-slate-200 dark:border-slate-700 hover:bg-white dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 transition-colors flex items-center gap-1.5"
+                      aria-label="Copy email address"
+                    >
+                      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                      <span id="copy-email-text">Copy</span>
+                    </button>
+                  </div>
+
+                  <!-- Phone & WhatsApp Box -->
+                  <div class="p-4 rounded-xl border border-slate-200/80 dark:border-slate-800 bg-slate-50/60 dark:bg-slate-800/40 flex items-center justify-between gap-3">
+                    <div class="flex items-center gap-3 min-w-0">
+                      <div class="w-10 h-10 rounded-lg bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                      </div>
+                      <div class="min-w-0">
+                        <span class="block text-[11px] font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500">Phone / WhatsApp</span>
+                        <a
+                          href="tel:+919829740688"
+                          id="contact-phone"
+                          class="text-xs sm:text-sm font-semibold text-slate-900 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors truncate block"
+                        >
+                          +91-9829740688
+                        </a>
+                      </div>
+                    </div>
+                    <a
+                      href="https://wa.me/919829740688"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="shrink-0 px-2.5 py-1.5 rounded-md text-xs font-medium border border-emerald-200 dark:border-emerald-800/60 bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 hover:bg-emerald-100 dark:hover:bg-emerald-900/60 transition-colors"
+                    >
+                      Chat →
+                    </a>
+                  </div>
+
+                  <!-- Location Box -->
+                  <div class="p-4 rounded-xl border border-slate-200/80 dark:border-slate-800 bg-slate-50/60 dark:bg-slate-800/40 flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center shrink-0">
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    </div>
+                    <div>
+                      <span class="block text-[11px] font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500">Location</span>
+                      <span class="text-xs sm:text-sm font-semibold text-slate-900 dark:text-white block">
+                        Rajasthan, India
+                      </span>
+                      <span class="text-[11px] text-slate-500 dark:text-slate-400">Open to Remote & Relocation</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Bottom Social & Resume Strip -->
+              <div class="pt-5 mt-6 border-t border-slate-100 dark:border-slate-800 flex flex-wrap items-center justify-between gap-3">
+                <span class="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-wider">Socials</span>
+                <div class="flex items-center gap-3">
+                  <a
+                    href="https://github.com/Mohammmedrafique"
+                    id="contact-github"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                  >
+                    <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                    <span>GitHub</span>
+                  </a>
+                  <span class="text-slate-300 dark:text-slate-700">•</span>
+                  <a
+                    href="https://www.linkedin.com/in/mohammed-rafique-283501113/"
+                    id="contact-linkedin"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                  >
+                    <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    <span>LinkedIn</span>
+                  </a>
+                  <span class="text-slate-300 dark:text-slate-700">•</span>
+                  <a
+                    href="assets/Mohammed-Rafique-Resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    download="Mohammed-Rafique-Resume.pdf"
+                    class="inline-flex items-center gap-1 text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline"
+                  >
+                    <span>Resume</span>
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Card: Direct Message Form -->
+            <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/70 p-6 sm:p-8 flex flex-col justify-between shadow-sm">
+              <div>
+                <div class="flex items-center justify-between pb-4 mb-6 border-b border-slate-100 dark:border-slate-800">
+                  <div>
+                    <h3 class="font-bold text-base text-slate-900 dark:text-white">Send a Message</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">I'll get back to you within 24 hours.</p>
+                  </div>
+                  <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-400 border border-emerald-200/50 dark:border-emerald-800/40">
+                    Fast Response
+                  </span>
+                </div>
+
+                <form
+                  id="contact-form"
+                  name="submit-to-google-sheet"
+                  action="https://getform.io/f/cf1da311-2ccf-400d-8f87-b150d9841021"
+                  method="POST"
+                  novalidate
+                  class="space-y-4"
+                >
+                  <!-- Honeypot -->
+                  <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" class="hidden" />
+
+                  <div>
+                    <label for="name" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
+                      Your Name <span class="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      class="w-full px-3.5 py-2.5 rounded-lg bg-slate-50/80 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 text-sm transition-all"
+                      placeholder="e.g. John Doe"
+                      required
+                      autocomplete="name"
+                      data-error="name-error"
+                      aria-describedby="name-error"
+                    />
+                    <span id="name-error" class="hidden text-xs text-red-500 mt-1 field-error">Please enter your name.</span>
+                  </div>
+
+                  <div>
+                    <label for="email" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
+                      Your Email <span class="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="w-full px-3.5 py-2.5 rounded-lg bg-slate-50/80 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 text-sm transition-all"
+                      placeholder="e.g. name@company.com"
+                      required
+                      autocomplete="email"
+                      data-error="email-error"
+                      aria-describedby="email-error"
+                    />
+                    <span id="email-error" class="hidden text-xs text-red-500 mt-1 field-error">Please enter a valid email address.</span>
+                  </div>
+
+                  <div>
+                    <label for="message" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
+                      Your Message <span class="text-red-500">*</span>
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows="4"
+                      class="w-full px-3.5 py-2.5 rounded-lg bg-slate-50/80 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 text-sm resize-y transition-all"
+                      placeholder="Hi Mohammed, I'd like to discuss an opportunity..."
+                      required
+                      minlength="10"
+                      data-error="message-error"
+                      aria-describedby="message-error"
+                    ></textarea>
+                    <span id="message-error" class="hidden text-xs text-red-500 mt-1 field-error">Please enter a message (at least 10 characters).</span>
+                  </div>
+
+                  <button
+                    type="submit"
+                    class="w-full py-2.5 px-4 rounded-lg font-semibold text-sm text-white bg-blue-600 hover:bg-blue-700 active:bg-blue-800 transition-colors shadow-sm flex items-center justify-center gap-2"
+                    id="submit-btn"
+                  >
+                    <span>Send Message</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                  </button>
+
+                  <div id="form-status" role="status" aria-live="polite" class="hidden p-3 rounded-lg text-xs font-medium text-center"></div>
+                  <span id="msg" class="visually-hidden"></span>
+                </form>
+              </div>
+
+              <div class="pt-4 mt-4 border-t border-slate-100 dark:border-slate-800 text-[11px] text-slate-400 dark:text-slate-500 text-center">
+                Protected with honeypot anti-spam. Your email is never shared.
+              </div>
             </div>
           </div>
-          <div class="contact-right">
-            <form name="submit-to-google-sheet">
-              <input type="text" name="name" placeholder="Your Name" required />
-
-              <input
-                type="email"
-                name="email"
-                placeholder="Your Email"
-                required
-              />
-
-              <textarea
-                name="message"
-                rows="6"
-                placeholder="Your Message"
-                required
-              ></textarea>
-
-              <button type="submit" class="btn2">Submit</button>
-            </form>
-            <span id="msg"></span>
-          </div>
         </div>
+      </section>
+    </main>
+
+    <!-- ======================================================================
+         9. Footer
+         ====================================================================== -->
+    <footer class="w-full py-8 border-t border-slate-200 dark:border-slate-800 text-xs text-slate-500 dark:text-slate-400 bg-white dark:bg-[#0b0d11]">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div>
+          © <span id="current-year">2026</span> Mohammed Rafique • Full Stack Developer
+        </div>
+        <button
+          type="button"
+          class="hover:text-slate-900 dark:hover:text-white transition-colors"
+          id="back-to-top"
+          aria-label="Scroll to top"
+        >
+          Back to Top ↑
+        </button>
+      </div>
+    </footer>
+
+    <!-- Mobile Drawer (Located at document end so it never interferes with flow) -->
+    <div id="mobile-drawer" popover="auto" role="dialog" aria-label="Mobile Navigation" class="bg-white dark:bg-[#11141a] border-l border-slate-200 dark:border-slate-800 text-slate-900 dark:text-slate-100 shadow-2xl">
+      <div>
+        <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-200 dark:border-slate-800">
+          <span class="font-bold text-sm">Navigation</span>
+          <button
+            class="w-7 h-7 flex items-center justify-center text-slate-500 hover:text-slate-900 dark:hover:text-white"
+            type="button"
+            popovertarget="mobile-drawer"
+            popovertargetaction="hide"
+            aria-label="Close menu"
+          >
+            ✕
+          </button>
+        </div>
+
+        <nav aria-label="Mobile links">
+          <ul class="flex flex-col gap-1 text-sm">
+            <li><a href="#home" class="mobile-nav-link block px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">Home</a></li>
+            <li><a href="#about" class="mobile-nav-link block px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">About</a></li>
+            <li><a href="#experience" class="mobile-nav-link block px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">Experience</a></li>
+            <li><a href="#projects" class="mobile-nav-link block px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">Projects</a></li>
+            <li><a href="#skills" class="mobile-nav-link block px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">Skills</a></li>
+            <li><a href="#github" class="mobile-nav-link block px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">GitHub</a></li>
+            <li><a href="#contact" class="mobile-nav-link block px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="pt-4 border-t border-slate-200 dark:border-slate-800">
+        <a
+          id="resume-link-2"
+          href="assets/Mohammed-Rafique-Resume.pdf"
+          class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 text-xs font-semibold rounded-lg bg-blue-600 text-white"
+          target="_blank"
+          rel="noopener noreferrer"
+          download="Mohammed-Rafique-Resume.pdf"
+        >
+          <span>Download Resume</span>
+          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+        </a>
       </div>
     </div>
+
+    <!-- Script -->
+    <script src="./index.js"></script>
   </body>
 </html>
-
-<script src="./index.js"></script>

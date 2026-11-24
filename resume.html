@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohammed Rafique - Resume</title>
+  <style>
+    @page {
+      size: letter;
+      margin: 0.45in 0.55in;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+      font-size: 9.3pt;
+      line-height: 1.38;
+      color: #1a1a1a;
+      background-color: #ffffff;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .resume-container {
+      width: 100%;
+      max-width: 8.5in;
+      margin: 0 auto;
+    }
+
+    /* HEADER */
+    .header {
+      text-align: center;
+      margin-bottom: 9pt;
+      padding-bottom: 6pt;
+      border-bottom: 1.5pt solid #0f172a;
+    }
+
+    .name {
+      font-size: 21pt;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: #0f172a;
+      text-transform: uppercase;
+      line-height: 1.1;
+      margin-bottom: 3pt;
+    }
+
+    .title {
+      font-size: 11pt;
+      font-weight: 600;
+      color: #2563eb;
+      margin-bottom: 4pt;
+      letter-spacing: 0.3px;
+    }
+
+    .contact-info {
+      font-size: 8.8pt;
+      color: #334155;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 5pt;
+    }
+
+    .contact-info a {
+      color: #0f172a;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    .separator {
+      color: #94a3b8;
+    }
+
+    /* SECTION */
+    .section {
+      margin-bottom: 10pt;
+    }
+
+    .page-break-before {
+      page-break-before: always;
+      break-before: page;
+      padding-top: 4pt;
+    }
+
+    .section-title {
+      font-size: 10.5pt;
+      font-weight: 700;
+      color: #0f172a;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      border-bottom: 1pt solid #cbd5e1;
+      padding-bottom: 2pt;
+      margin-bottom: 5pt;
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    /* SUMMARY */
+    .summary-text {
+      font-size: 9.1pt;
+      color: #334155;
+      text-align: justify;
+      line-height: 1.4;
+    }
+
+    /* SKILLS */
+    .skills-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 3pt;
+    }
+
+    .skill-row {
+      font-size: 9.1pt;
+      line-height: 1.35;
+    }
+
+    .skill-category {
+      font-weight: 700;
+      color: #0f172a;
+      min-width: 145px;
+      display: inline-block;
+    }
+
+    .skill-list {
+      color: #334155;
+    }
+
+    /* ENTRIES */
+    .entry {
+      margin-bottom: 7pt;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    .entry:last-child {
+      margin-bottom: 0;
+    }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 1.5pt;
+    }
+
+    .entry-title {
+      font-size: 9.8pt;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .entry-subtitle {
+      font-size: 9.2pt;
+      font-weight: 600;
+      color: #2563eb;
+    }
+
+    .entry-location,
+    .entry-date {
+      font-size: 8.8pt;
+      font-weight: 500;
+      color: #475569;
+      white-space: nowrap;
+    }
+
+    .entry-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2pt;
+    }
+
+    .bullets {
+      list-style-type: disc;
+      padding-left: 14pt;
+      margin-top: 2pt;
+    }
+
+    .bullets li {
+      font-size: 8.9pt;
+      color: #334155;
+      margin-bottom: 2.5pt;
+      line-height: 1.36;
+      text-align: justify;
+    }
+
+    .bullets li:last-child {
+      margin-bottom: 0;
+    }
+
+    .bullets li strong {
+      color: #0f172a;
+    }
+
+    .project-link {
+      font-size: 8.6pt;
+      font-weight: 700;
+      color: #2563eb;
+      text-decoration: none;
+      margin-left: 4pt;
+    }
+
+    .project-link:hover {
+      text-decoration: underline;
+    }
+
+    .tech-stack-tag {
+      font-size: 8.6pt;
+      font-weight: 600;
+      color: #475569;
+      font-style: italic;
+    }
+
+    @media print {
+      body {
+        background-color: #ffffff;
+      }
+      .resume-container {
+        width: 100%;
+      }
+      a {
+        text-decoration: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="resume-container">
+    <!-- ==================== PAGE 1 ==================== -->
+
+    <!-- HEADER -->
+    <header class="header">
+      <h1 class="name">Mohammed Rafique</h1>
+      <div class="title">Full Stack Developer | Software Engineer (2.5+ Years Experience)</div>
+      <div class="contact-info">
+        <span>Kota, Rajasthan, India (Open to Remote / Relocation)</span>
+        <span class="separator">•</span>
+        <span><a href="tel:+919829740688">+91-9829740688</a></span>
+        <span class="separator">•</span>
+        <span><a href="mailto:Kota.mohdrafiq@gmail.com">Kota.mohdrafiq@gmail.com</a></span>
+        <span class="separator">•</span>
+        <span><a href="https://linkedin.com/in/mohammed-rafique-283501113" target="_blank" rel="noopener">linkedin.com/in/mohammed-rafique-283501113</a></span>
+        <span class="separator">•</span>
+        <span><a href="https://github.com/Mohammmedrafique" target="_blank" rel="noopener">github.com/Mohammmedrafique</a></span>
+        <span class="separator">•</span>
+        <span><a href="https://mohammmedrafique.github.io/" target="_blank" rel="noopener">mohammmedrafique.github.io</a></span>
+      </div>
+    </header>
+
+    <!-- PROFESSIONAL SUMMARY -->
+    <section class="section">
+      <h2 class="section-title">Professional Summary</h2>
+      <p class="summary-text">
+        Full Stack Web Developer with <strong>2.5+ years of software engineering experience</strong> building robust, scalable web applications across modern frontend and backend architectures. Proven expertise in the <strong>MERN Stack (MongoDB, Express.js, React.js, Node.js)</strong>, TypeScript, RESTful API design, state management, and database schema optimization at Schoollog. Adept at transforming business requirements into high-performance, maintainable software while championing clean code principles, Agile development, and cross-functional team execution.
+      </p>
+    </section>
+
+    <!-- TECHNICAL SKILLS -->
+    <section class="section">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-row">
+          <span class="skill-category">Languages & Core:</span>
+          <span class="skill-list">JavaScript (ES6+), TypeScript, HTML5, CSS3, Data Structures & Algorithms (DSA), Object-Oriented Programming (OOP)</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-category">Frontend Stack:</span>
+          <span class="skill-list">React.js, Redux, Redux Toolkit, Context API, React Flow, Tailwind CSS, Responsive Web Design, Web Accessibility (a11y)</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-category">Backend & APIs:</span>
+          <span class="skill-list">Node.js, Express.js, RESTful API Design, JWT Authentication, Role-Based Access Control (RBAC), Middleware, Postman</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-category">Databases:</span>
+          <span class="skill-list">MongoDB, Mongoose ODM, Query Optimization, Aggregation Pipelines, MySQL, Relational Schema Modeling</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-category">DevOps & Tools:</span>
+          <span class="skill-list">Git, GitHub, Vite, Webpack, Vercel, Netlify, Render, Linux/Unix, Agile/Scrum Methodologies, Jira</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK EXPERIENCE -->
+    <section class="section">
+      <h2 class="section-title">Work Experience</h2>
+
+      <!-- Schoollog -->
+      <article class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Schoollog (EdTech SaaS)</span>
+          <span class="entry-date">2023 – Present</span>
+        </div>
+        <div class="entry-meta">
+          <span class="entry-subtitle">Full Stack Web Developer</span>
+          <span class="entry-location">Jaipur / Kota, India</span>
+        </div>
+        <ul class="bullets">
+          <li>Architected and implemented responsive SaaS ERP dashboard modules using <strong>React.js</strong> and <strong>Tailwind CSS</strong>, optimizing component render cycles and improving page load speeds by 28%.</li>
+          <li>Engineered robust backend RESTful microservices in <strong>Node.js and Express.js</strong>, establishing secure JWT authentication, session handling, and role-based access control (RBAC) across administrative and student portals.</li>
+          <li>Designed and optimized <strong>MongoDB</strong> database schemas and aggregation queries for high-volume attendance tracking, exam scoring systems, and fee transaction processing.</li>
+          <li>Developed reusable UI component libraries and custom hooks, eliminating boilerplate code across 4 core dashboard modules.</li>
+          <li>Integrated third-party APIs and notification services, ensuring fault-tolerant communication pipelines and automated report generation.</li>
+          <li>Collaborated with product managers and engineering peers in weekly <strong>Agile/Scrum</strong> sprint cycles, conducting thorough code reviews and participating in zero-downtime production deployments.</li>
+        </ul>
+      </article>
+
+      <!-- Masai School Apprenticeship -->
+      <article class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Masai School</span>
+          <span class="entry-date">Dec 2022 – 2023</span>
+        </div>
+        <div class="entry-meta">
+          <span class="entry-subtitle">Full Stack Web Development Apprenticeship</span>
+          <span class="entry-location">Bengaluru, India</span>
+        </div>
+        <ul class="bullets">
+          <li>Completed over <strong>1,200+ hours</strong> of intensive coding curriculum focused on Full Stack Web Development, Data Structures, Algorithms, and production software standards.</li>
+          <li>Engineered and deployed 6+ full-stack web applications in fast-paced sprint cycles using React, Node.js, Express, and MongoDB.</li>
+          <li>Awarded the <strong>Collaborative Project Success Award</strong> for leading a 5-developer engineering team to build and deploy an e-commerce platform ahead of deadline.</li>
+        </ul>
+      </article>
+
+      <!-- Freelance SEO & Web -->
+      <article class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Self-Employed / Freelance</span>
+          <span class="entry-date">Jan 2020 – Nov 2022</span>
+        </div>
+        <div class="entry-meta">
+          <span class="entry-subtitle">Web Optimization & SEO Specialist</span>
+          <span class="entry-location">Remote, India</span>
+        </div>
+        <ul class="bullets">
+          <li>Audited and enhanced technical web performance, Core Web Vitals (LCP, CLS, FID), and structured data markup for client business websites.</li>
+          <li>Integrated analytics and tracking pipelines, achieving significant search visibility improvements and organic user acquisition.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- ==================== PAGE 2 ==================== -->
+
+    <!-- FEATURED PROJECTS -->
+    <section class="section page-break-before">
+      <h2 class="section-title">Featured Engineering Projects</h2>
+
+      <!-- Chatbot Flow Builder -->
+      <article class="entry">
+        <div class="entry-header">
+          <div>
+            <span class="entry-title">Chatbot Flow Builder</span>
+            <span class="tech-stack-tag">— React.js, React Flow, Vite, Tailwind CSS</span>
+          </div>
+          <div>
+            <a href="https://chatbot-flow-builder-topaz.vercel.app/" target="_blank" rel="noopener" class="project-link">[Live Demo]</a>
+            <a href="https://github.com/Mohammmedrafique/chatbot-flow-builder" target="_blank" rel="noopener" class="project-link">[GitHub]</a>
+          </div>
+        </div>
+        <ul class="bullets">
+          <li>Engineered a drag-and-drop conversational node workflow designer allowing administrators to model branching dialogue trees visually.</li>
+          <li>Implemented custom nodes with dynamic message configuration, connection validation enforcing single target edge rules, and local persistence.</li>
+          <li>Engineered state synchronization preventing cyclic dependencies and orphaned message trees, handling 50+ node graphs with 60 FPS fluidity.</li>
+        </ul>
+      </article>
+
+      <!-- Full-Stack Blog Platform -->
+      <article class="entry">
+        <div class="entry-header">
+          <div>
+            <span class="entry-title">Full-Stack Blog Platform</span>
+            <span class="tech-stack-tag">— MongoDB, Express.js, React.js, Node.js, JWT</span>
+          </div>
+          <div>
+            <a href="https://blog-app-client-nine.vercel.app/" target="_blank" rel="noopener" class="project-link">[Live Demo]</a>
+            <a href="https://github.com/Mohammmedrafique/Blog-App" target="_blank" rel="noopener" class="project-link">[GitHub]</a>
+          </div>
+        </div>
+        <ul class="bullets">
+          <li>Architected a complete production-ready blogging ecosystem featuring secure JWT authentication and password hashing with bcrypt.</li>
+          <li>Engineered dynamic category filtering, full-text search, rich markdown article formatting, and responsive reader-optimized UI.</li>
+          <li>Built scalable REST API endpoints with Express middleware validation, error handling, and optimized Mongoose database indexing.</li>
+        </ul>
+      </article>
+
+      <!-- Task Manager Platform -->
+      <article class="entry">
+        <div class="entry-header">
+          <div>
+            <span class="entry-title">Full-Stack Task Manager Platform</span>
+            <span class="tech-stack-tag">— React.js, Node.js, Express.js, MongoDB, REST APIs</span>
+          </div>
+          <div>
+            <a href="https://task-manager-client-taupe.vercel.app/" target="_blank" rel="noopener" class="project-link">[Live Demo]</a>
+            <a href="https://github.com/Mohammmedrafique/task-manager" target="_blank" rel="noopener" class="project-link">[GitHub]</a>
+          </div>
+        </div>
+        <ul class="bullets">
+          <li>Developed an Agile sprint project management system featuring an interactive Kanban board with drag-and-drop status workflows.</li>
+          <li>Designed role-based access control allowing team leads to create projects, assign members, and monitor milestone progression.</li>
+          <li>Implemented real-time activity auditing, deadline alerts, and granular priority labeling across active deliverables.</li>
+        </ul>
+      </article>
+
+      <!-- E-Commerce Web Application -->
+      <article class="entry">
+        <div class="entry-header">
+          <div>
+            <span class="entry-title">E-Commerce Web Application</span>
+            <span class="tech-stack-tag">— React.js, Redux, Node.js, Express.js, MongoDB</span>
+          </div>
+          <div>
+            <a href="https://github.com/Mohammmedrafique" target="_blank" rel="noopener" class="project-link">[GitHub]</a>
+          </div>
+        </div>
+        <ul class="bullets">
+          <li>Led a 5-member engineering team to design and build a full-featured e-commerce platform with product catalogs, filtering, cart management, and checkout flows.</li>
+          <li>Integrated centralized global state management using <strong>Redux</strong> to synchronize cart state, user sessions, and inventory levels across routes.</li>
+          <li>Earned Masai School's <strong>Collaborative Project Success Award</strong> for exceptional architecture design, code quality, and delivery speed.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- EDUCATION & ACADEMIC CREDENTIALS -->
+    <section class="section">
+      <h2 class="section-title">Education & Academic Credentials</h2>
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Rajasthan Technical University (RTU), Kota</span>
+          <span class="entry-date">2016 – 2021</span>
+        </div>
+        <div class="entry-meta">
+          <span class="entry-subtitle">Bachelor of Technology (B.Tech) - Civil Engineering</span>
+          <span class="entry-location">Kota, Rajasthan</span>
+        </div>
+      </div>
+      <div class="entry" style="margin-bottom: 0;">
+        <div class="entry-header">
+          <span class="entry-title">Masai School</span>
+          <span class="entry-date">Dec 2022 – 2023</span>
+        </div>
+        <div class="entry-meta">
+          <span class="entry-subtitle">Full Stack Web Development Apprenticeship</span>
+          <span class="entry-location">Bengaluru, India</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS & HONORS -->
+    <section class="section" style="margin-bottom: 0;">
+      <h2 class="section-title">Certifications & Honors</h2>
+      <ul class="bullets" style="margin-top: 3pt;">
+        <li><strong>Collaborative Project Success Award</strong> — Masai School (Awarded for excellence in team leadership and sprint execution).</li>
+        <li><strong>1,200+ Hours Full-Stack Software Engineering Curriculum</strong> — Masai School (MERN Stack, DSA, Software Architecture).</li>
+        <li><strong>Full Stack Web Developer Professional Certification</strong> — Verified expertise in modern JavaScript, React.js, and Node.js.</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

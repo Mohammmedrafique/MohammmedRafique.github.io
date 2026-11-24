@@ -348,7 +348,255 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // --------------------------------------------------------------------------
-  // 9. Back To Top
+  // 9. Project Details Modal Controller
+  // --------------------------------------------------------------------------
+  const PROJECTS_DATA = {
+    "chatbot-flow": {
+      title: "Chatbot Flow Builder",
+      subtitle: "Visual node-based conversational workflow designer built with React Flow",
+      image: "assets/chatbot_flow_homepage.png",
+      alt: "Chatbot Flow Builder interface showing node connections",
+      problem:
+        "Building complex conversational trees and chatbot branching logic in static code or nested JSON files is error-prone, difficult to visualize, and inaccessible to non-technical stakeholders.",
+      solution:
+        "Engineered an interactive infinite canvas with React Flow where users can visually create, configure, and connect conversational message nodes, choice branches, and triggers with real-time validation.",
+      features: [
+        "Interactive drag-and-drop node canvas with smooth zoom, pan, and viewport controls",
+        "Custom input and output connection handles ensuring valid one-way flow execution",
+        "Real-time validation engine flagging orphan or disconnected conversational nodes",
+        "Single-click JSON schema export and import for seamless bot deployment and backend execution"
+      ],
+      architecture:
+        "React.js single-page application with Vite bundling. Implements custom React Flow node renderers, unidirectional edge state management, and schema-validated JSON serialization.",
+      stack: ["React.js", "React Flow", "Vite", "Tailwind CSS", "JavaScript (ES6+)"],
+      demo: "https://chatbot-flow-builder-seven-eta.vercel.app/",
+      github: "https://github.com/Mohammmedrafique/Chatbot-flow-builder"
+    },
+    "blog-platform": {
+      title: "Full-Stack Blog Platform",
+      subtitle: "Production-style MERN publishing and community application with JWT authentication",
+      image: "assets/masai_homepage.png",
+      alt: "Full-Stack Blog Platform homepage screenshot",
+      problem:
+        "Content publishing platforms require scalable user authorization, secure credential storage, low-latency article querying, and frictionless reading experiences across devices.",
+      solution:
+        "Designed and built an end-to-end MERN blogging platform featuring JWT-secured user sessions, rich article authoring, category filtering, and threaded user interactions.",
+      features: [
+        "Secure user signup and login with bcrypt password hashing and JWT sessions",
+        "Complete CRUD lifecycle for blog articles with category tagging and markdown previews",
+        "Interactive reader engagement including post likes and threaded comment conversations",
+        "Optimized MongoDB indexing and pagination queries for high-speed article retrieval"
+      ],
+      architecture:
+        "Decoupled MERN architecture with an Express.js REST API layer, MongoDB persistence via Mongoose schemas, and a responsive React client.",
+      stack: ["MongoDB", "Express.js", "React.js", "Node.js", "JWT Authentication", "REST APIs"],
+      demo: "https://blog-web-app-qbvk.vercel.app/",
+      github: "https://github.com/Mohammmedrafique/Blog_web_app"
+    },
+    "task-manager": {
+      title: "Full Stack Task Manager",
+      subtitle: "Agile workflow productivity and sprint management system",
+      image: "assets/task_homepage.png",
+      alt: "Task Manager dashboard screenshot",
+      problem:
+        "Distributed teams and developers struggle to maintain real-time visibility into sprint backlogs, task lifecycles, and priority assignments with zero state drift.",
+      solution:
+        "Constructed a responsive task tracking dashboard with status columns (Backlog, In Progress, Completed), multi-level priority sorting, and personal user dashboards backed by MongoDB.",
+      features: [
+        "Dynamic task lifecycle management with instant status transitions",
+        "Multi-attribute filtering by priority (High, Medium, Low), status, and keyword search",
+        "Protected user-scoped data access ensuring private, isolated project task boards",
+        "RESTful CRUD API endpoints with structured request validation and error middleware"
+      ],
+      architecture:
+        "MERN stack tool utilizing Express router controllers, Mongoose schemas with indexed user references, and React state hooks for responsive updates.",
+      stack: ["React.js", "Node.js", "Express.js", "MongoDB", "REST APIs", "Tailwind CSS"],
+      demo: "https://task-manager-srex.vercel.app/",
+      github: "https://github.com/Mohammmedrafique/task_manager"
+    },
+    "furniturecraft": {
+      title: "FurnitureCraft Online Store",
+      subtitle: "E-Commerce store with real-time cart state, filtering, and TypeScript types",
+      image: "assets/projectpic/furniturecraft.png",
+      alt: "FurnitureCraft online store screenshot",
+      problem:
+        "E-commerce shoppers need instantaneous product filtering by category and price range without slow page reloads or cart state loss.",
+      solution:
+        "Built a typed e-commerce platform in TypeScript and React featuring multi-facet filtering, responsive price range sliders, and persistent shopping cart state.",
+      features: [
+        "Real-time category filtering and dynamic price range selection",
+        "Shopping cart state management with quantity adjustment and checkout calculation",
+        "Strict TypeScript interfaces preventing runtime type errors across product models",
+        "Responsive e-commerce layout optimized for mobile and desktop browsing"
+      ],
+      architecture:
+        "TypeScript frontend with React component state, modular product cards, and Express/MongoDB backend catalog integration.",
+      stack: ["TypeScript", "React.js", "Express.js", "MongoDB", "Tailwind CSS"],
+      demo: "https://shoppage.vercel.app/",
+      github: "https://github.com/Mohammmedrafique"
+    },
+    "ai-interview": {
+      title: "AI Virtual Interview Assistant",
+      subtitle: "Technical interview simulation and evaluation platform powered by OpenAI API",
+      image: "assets/Student.png",
+      alt: "AI Virtual Interview Assistant screenshot",
+      problem:
+        "Software engineering candidates lack realistic, on-demand mock interview practice with actionable, constructive feedback on their technical answers.",
+      solution:
+        "Created an interactive interview simulator that generates domain-specific technical questions, evaluates candidate responses via OpenAI API, and delivers scores and suggestions.",
+      features: [
+        "Dynamic question generation tailored to software engineering topics",
+        "Natural language evaluation of candidate technical answers via OpenAI API",
+        "Structured feedback reports highlighting conceptual accuracy and areas for improvement",
+        "Clean interactive UI for distraction-free technical practice"
+      ],
+      architecture:
+        "Node.js backend proxying OpenAI API requests with secure credential management, coupled with a React user interface.",
+      stack: ["React.js", "Node.js", "OpenAI API", "REST APIs"],
+      demo: "https://github.com/Mohammmedrafique",
+      github: "https://github.com/Mohammmedrafique"
+    },
+    "fitquest": {
+      title: "FitQuest - Gamify Fitness",
+      subtitle: "Fitness gamification and social challenge platform built in an Agile team",
+      image: "assets/projectpic/280637609-37cae2d2-ba2d-49ac-b3fc-1dac772c29d4.png",
+      alt: "FitQuest gamify fitness application screenshot",
+      problem:
+        "Fitness habits are difficult to sustain without social accountability, milestone incentives, and tangible progress feedback.",
+      solution:
+        "Collaborated in a 4-person Agile sprint to develop FitQuest, an app that transforms workout logging into gamified challenges with points, streaks, and leaderboards.",
+      features: [
+        "Gamified workout activity tracking with daily challenge goal milestones",
+        "Global and peer leaderboards fostering accountability and friendly competition",
+        "Social activity feed with real-time updates and community motivation",
+        "Cross-functional team sprint development following Git branching and PR reviews"
+      ],
+      architecture:
+        "Full-stack MERN application developed collaboratively with team branch management, Express routing, and MongoDB aggregations.",
+      stack: ["React.js", "Node.js", "Express.js", "MongoDB", "Agile/Scrum"],
+      demo: "https://posh-division-4370.vercel.app/",
+      github: "https://github.com/audacity07/posh-division-4370.git"
+    }
+  };
+
+  const projectModal = document.getElementById("project-modal");
+  const modalCloseBtn = document.getElementById("close-modal-btn");
+  const modalTitle = document.getElementById("modal-title");
+  const modalSubtitle = document.getElementById("modal-subtitle");
+  const modalImage = document.getElementById("modal-image");
+  const modalProblem = document.getElementById("modal-problem");
+  const modalSolution = document.getElementById("modal-solution");
+  const modalFeatures = document.getElementById("modal-features");
+  const modalArchitecture = document.getElementById("modal-architecture");
+  const modalStack = document.getElementById("modal-stack");
+  const modalDemo = document.getElementById("modal-demo");
+  const modalGithub = document.getElementById("modal-github");
+
+  const openProjectModal = (projectId) => {
+    const data = PROJECTS_DATA[projectId];
+    if (!data || !projectModal) return;
+
+    if (modalTitle) modalTitle.textContent = data.title;
+    if (modalSubtitle) modalSubtitle.textContent = data.subtitle;
+    if (modalImage) {
+      modalImage.src = data.image;
+      modalImage.alt = data.alt;
+    }
+    if (modalProblem) modalProblem.textContent = data.problem;
+    if (modalSolution) modalSolution.textContent = data.solution;
+    if (modalArchitecture) modalArchitecture.textContent = data.architecture;
+
+    if (modalFeatures) {
+      modalFeatures.replaceChildren();
+      data.features.forEach((feat) => {
+        const li = document.createElement("li");
+        li.className = "flex items-start gap-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300";
+        const bullet = document.createElement("span");
+        bullet.className = "w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 shrink-0";
+        const text = document.createElement("span");
+        text.textContent = feat;
+        li.append(bullet, text);
+        modalFeatures.appendChild(li);
+      });
+    }
+
+    if (modalStack) {
+      modalStack.replaceChildren();
+      data.stack.forEach((tech) => {
+        const badge = document.createElement("span");
+        badge.className =
+          "px-2.5 py-1 rounded-md text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700";
+        badge.textContent = tech;
+        modalStack.appendChild(badge);
+      });
+    }
+
+    if (modalDemo) {
+      modalDemo.href = data.demo;
+      modalDemo.style.display = data.demo ? "inline-flex" : "none";
+    }
+    if (modalGithub) {
+      modalGithub.href = data.github;
+      modalGithub.style.display = data.github ? "inline-flex" : "none";
+    }
+
+    if (typeof projectModal.showModal === "function") {
+      projectModal.showModal();
+    }
+  };
+
+  document.querySelectorAll("[data-project-modal]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const projectId = btn.getAttribute("data-project-modal");
+      if (projectId) openProjectModal(projectId);
+    });
+  });
+
+  if (modalCloseBtn && projectModal) {
+    modalCloseBtn.addEventListener("click", () => {
+      projectModal.close();
+    });
+  }
+
+  if (projectModal && !("closedBy" in HTMLDialogElement.prototype)) {
+    projectModal.addEventListener("click", (e) => {
+      const rect = projectModal.getBoundingClientRect();
+      const isInDialog =
+        rect.top <= e.clientY &&
+        e.clientY <= rect.top + rect.height &&
+        rect.left <= e.clientX &&
+        e.clientX <= rect.left + rect.width;
+      if (!isInDialog) {
+        projectModal.close();
+      }
+    });
+  }
+
+  // --------------------------------------------------------------------------
+  // 10. Hero Code Window Tab Switcher
+  // --------------------------------------------------------------------------
+  const codeTabBtns = document.querySelectorAll(".hero-code-tab");
+  const codeTabPanes = document.querySelectorAll(".hero-code-pane");
+  if (codeTabBtns.length > 0 && codeTabPanes.length > 0) {
+    codeTabBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const targetTab = btn.getAttribute("data-tab");
+        codeTabBtns.forEach((b) => {
+          const isActive = b.getAttribute("data-tab") === targetTab;
+          b.classList.toggle("text-slate-200", isActive);
+          b.classList.toggle("bg-slate-800", isActive);
+          b.classList.toggle("text-slate-400", !isActive);
+        });
+        codeTabPanes.forEach((pane) => {
+          const isTarget = pane.getAttribute("data-pane") === targetTab;
+          pane.classList.toggle("hidden", !isTarget);
+        });
+      });
+    });
+  }
+
+  // --------------------------------------------------------------------------
+  // 11. Back To Top
   // --------------------------------------------------------------------------
   const backToTopBtn = document.getElementById("back-to-top");
   if (backToTopBtn) {

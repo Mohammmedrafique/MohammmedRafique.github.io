@@ -4,12 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="light dark" />
-    <title>Mohammed Rafique | Full Stack Developer (2.5+ Years Exp)</title>
+    <title>Mohammed Rafique | Full Stack Developer</title>
     <meta
       name="description"
-      content="Mohammed Rafique - Full Stack Web Developer at Schoollog with 2.5+ years of experience in React, Node.js, Express, and MongoDB."
+      content="Mohammed Rafique - Full Stack Developer building scalable web applications with React, Node.js, Express, and MongoDB. 2.5+ years production experience at Schoollog."
     />
     <meta name="author" content="Mohammed Rafique" />
+    <link rel="canonical" href="https://mohammmedrafique.github.io/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mohammmedrafique.github.io/" />
+    <meta property="og:title" content="Mohammed Rafique | Full Stack Developer" />
+    <meta
+      property="og:description"
+      content="Full Stack Developer building scalable web applications across frontend, backend, APIs, and databases. 2.5+ years of software engineering experience at Schoollog."
+    />
+    <meta property="og:image" content="https://mohammmedrafique.github.io/assets/pic2.jpg" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://mohammmedrafique.github.io/" />
+    <meta name="twitter:title" content="Mohammed Rafique | Full Stack Developer" />
+    <meta
+      name="twitter:description"
+      content="Full Stack Developer building scalable web applications across frontend, backend, APIs, and databases."
+    />
+    <meta name="twitter:image" content="https://mohammmedrafique.github.io/assets/pic2.jpg" />
 
     <!-- Favicon -->
     <link
@@ -22,7 +43,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
 
@@ -48,7 +69,7 @@
       };
     </script>
 
-    <!-- Custom Stylesheet -->
+    <!-- Custom Companion Stylesheet -->
     <link rel="stylesheet" href="./index.css" />
   </head>
 
@@ -57,7 +78,7 @@
     <div id="scroll-progress" aria-hidden="true"></div>
 
     <!-- ======================================================================
-         1. Navigation Header
+         1. Sticky Navigation Header
          ====================================================================== -->
     <header class="w-full sticky top-0 z-40 backdrop-blur-md bg-white/95 dark:bg-[#0b0d11]/95 border-b border-slate-200 dark:border-slate-800/80 transition-colors" id="header">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
@@ -80,7 +101,7 @@
           </div>
         </a>
 
-        <!-- Desktop Navigation -->
+        <!-- Desktop Navigation Links -->
         <nav class="hidden md:flex items-center" id="nav-menu" aria-label="Primary navigation">
           <ul class="flex items-center gap-1 text-sm font-medium">
             <li><a href="#home" class="nav-link px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-colors" aria-current="true">Home</a></li>
@@ -88,12 +109,11 @@
             <li><a href="#experience" class="nav-link px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-colors">Experience</a></li>
             <li><a href="#projects" class="nav-link px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-colors">Projects</a></li>
             <li><a href="#skills" class="nav-link px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-colors">Skills</a></li>
-            <li><a href="#github" class="nav-link px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-colors">GitHub</a></li>
             <li><a href="#contact" class="nav-link px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-colors">Contact</a></li>
           </ul>
         </nav>
 
-        <!-- Right Controls -->
+        <!-- Right Controls: Theme Toggle, Resume & Mobile Menu -->
         <div class="flex items-center gap-2">
           <!-- Theme Toggle Button -->
           <button
@@ -103,9 +123,9 @@
             aria-label="Toggle theme"
             title="Toggle theme"
           >
-            <!-- Sun Icon -->
+            <!-- Sun Icon (Dark Mode) -->
             <svg class="w-4 h-4 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
-            <!-- Moon Icon -->
+            <!-- Moon Icon (Light Mode) -->
             <svg class="w-4 h-4 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
           </button>
 
@@ -113,7 +133,7 @@
           <a
             id="resume-link-1"
             href="assets/Mohammed-Rafique-Resume.pdf"
-            class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-blue-600 hover:bg-blue-700 text-white transition-colors"
+            class="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-blue-600 hover:bg-blue-700 text-white transition-colors shadow-sm"
             target="_blank"
             rel="noopener noreferrer"
             download="Mohammed-Rafique-Resume.pdf"
@@ -129,7 +149,7 @@
             popovertarget="mobile-drawer"
             popovertargetaction="toggle"
             aria-controls="mobile-drawer"
-            aria-label="Open menu"
+            aria-label="Open navigation menu"
           >
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
           </button>
@@ -143,91 +163,156 @@
            ====================================================================== -->
       <section id="home" class="w-full py-16 sm:py-24 border-b border-slate-200 dark:border-slate-800/80">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
-            <!-- Left Column: Copy & Actions -->
-            <div class="md:col-span-8 flex flex-col items-start">
-              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-blue-400 border border-blue-200 dark:border-blue-800/80 mb-5">
-                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <!-- Left Column: Primary Positioning & CTAs -->
+            <div class="lg:col-span-7 flex flex-col items-start">
+              <!-- Live Status Pill -->
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800/60 mb-5">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                 <span>Software Engineer at Schoollog • 2.5+ Years Exp</span>
               </div>
 
-              <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white tracking-tight mb-3">
+              <!-- Main Name Heading -->
+              <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-3">
                 Mohammed Rafique
               </h1>
 
-              <div class="text-lg sm:text-xl font-semibold text-slate-700 dark:text-slate-300 mb-5 min-h-[1.75rem]">
-                <span class="typing-cursor text-blue-600 dark:text-blue-400" id="typing-text">Full Stack MERN Developer</span>
+              <!-- Primary Positioning Statement -->
+              <h2 class="text-xl sm:text-2xl font-bold text-slate-800 dark:text-slate-200 tracking-tight mb-4">
+                Full Stack Developer building scalable web applications.
+              </h2>
+
+              <!-- Dynamic Role Tagline -->
+              <div class="text-sm sm:text-base font-semibold text-blue-600 dark:text-blue-400 mb-5 min-h-[1.5rem] font-mono">
+                <span class="typing-cursor" id="typing-text">Full Stack MERN Developer</span>
               </div>
 
-              <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm sm:text-base max-w-xl mb-8" id="user-detail-intro">
-                Software Engineer based in Rajasthan, India, with over 2.5 years of experience building production web applications. Specializing in the MERN stack (MongoDB, Express, React, Node.js), scalable RESTful APIs, and responsive, accessible user interfaces.
+              <!-- Supporting Description -->
+              <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm sm:text-base max-w-xl mb-7" id="user-detail-intro">
+                I design and engineer production-grade web applications from responsive frontend user interfaces to scalable backend services, secure RESTful APIs, and performant databases. 2.5+ years of software engineering experience building web ERP systems at Schoollog.
               </p>
 
-              <!-- Action Buttons -->
-              <div class="flex flex-wrap items-center gap-3">
+              <!-- Primary & Secondary CTAs -->
+              <div class="flex flex-wrap items-center gap-3 mb-8">
+                <!-- Primary CTA -->
                 <a
                   href="#projects"
-                  class="px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold bg-blue-600 hover:bg-blue-700 text-white transition-colors"
+                  class="px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white transition-colors shadow-sm inline-flex items-center gap-2"
                 >
-                  View Projects
+                  <span>View Projects</span>
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                 </a>
-                <a
-                  href="assets/Mohammed-Rafique-Resume.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold border border-slate-300 dark:border-slate-700 hover:border-slate-400 dark:hover:border-slate-500 text-slate-800 dark:text-slate-200 transition-colors"
-                >
-                  Download Resume
-                </a>
-                <a
-                  href="#contact"
-                  class="px-5 py-2.5 rounded-lg text-xs sm:text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"
-                >
-                  Contact Me →
-                </a>
-              </div>
 
-              <!-- Social Links Strip -->
-              <div class="flex items-center gap-5 mt-8 pt-6 border-t border-slate-100 dark:border-slate-800/80 w-full">
+                <!-- Secondary CTA: GitHub -->
                 <a
                   href="https://github.com/Mohammmedrafique"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="text-xs font-medium text-slate-500 hover:text-slate-900 dark:hover:text-white flex items-center gap-1.5 transition-colors"
+                  class="px-4 py-2.5 rounded-lg text-xs sm:text-sm font-semibold border border-slate-300 dark:border-slate-700 hover:border-slate-400 dark:hover:border-slate-600 text-slate-800 dark:text-slate-200 transition-colors inline-flex items-center gap-2"
                 >
                   <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
                   <span>GitHub</span>
                 </a>
+
+                <!-- Download Resume CTA -->
                 <a
-                  href="https://www.linkedin.com/in/mohammed-rafique-283501113/"
+                  href="assets/Mohammed-Rafique-Resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="text-xs font-medium text-slate-500 hover:text-slate-900 dark:hover:text-white flex items-center gap-1.5 transition-colors"
+                  download="Mohammed-Rafique-Resume.pdf"
+                  class="px-4 py-2.5 rounded-lg text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-colors inline-flex items-center gap-1.5"
                 >
-                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                  <span>LinkedIn</span>
+                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                  <span>Download Resume</span>
                 </a>
-                <a
-                  href="mailto:Kota.mohdrafiq@gmail.com"
-                  class="text-xs font-medium text-slate-500 hover:text-slate-900 dark:hover:text-white flex items-center gap-1.5 transition-colors"
-                >
-                  <svg class="w-4 h-4 fill-none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                  <span>Kota.mohdrafiq@gmail.com</span>
-                </a>
+              </div>
+
+              <!-- Quick Technical Stack Strip -->
+              <div class="flex flex-wrap items-center gap-y-2 gap-x-4 pt-5 border-t border-slate-200 dark:border-slate-800/80 w-full text-xs text-slate-500 dark:text-slate-400">
+                <span class="font-semibold text-slate-700 dark:text-slate-300">Core Stack:</span>
+                <span class="font-mono">React.js</span>
+                <span>•</span>
+                <span class="font-mono">TypeScript</span>
+                <span>•</span>
+                <span class="font-mono">Node.js</span>
+                <span>•</span>
+                <span class="font-mono">Express</span>
+                <span>•</span>
+                <span class="font-mono">MongoDB</span>
               </div>
             </div>
 
-            <!-- Right Column: Profile Picture -->
-            <div class="md:col-span-4 flex justify-center md:justify-end">
-              <div class="w-52 h-64 sm:w-60 sm:h-72 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-md bg-slate-100 dark:bg-slate-900">
-                <img
-                  src="./assets/pic.jpg"
-                  alt="Mohammed Rafique"
-                  class="w-full h-full object-cover"
-                  width="240"
-                  height="288"
-                  loading="eager"
-                />
+            <!-- Right Column: Subtle Developer IDE Visual -->
+            <div class="lg:col-span-5 flex justify-center lg:justify-end">
+              <div class="w-full max-w-md rounded-2xl border border-slate-800/80 bg-[#0d1117] text-slate-300 shadow-2xl overflow-hidden font-mono text-xs">
+                <!-- Window Chrome Header -->
+                <div class="flex items-center justify-between px-4 py-2.5 bg-[#161b22] border-b border-slate-800">
+                  <div class="flex items-center gap-2">
+                    <span class="w-3 h-3 rounded-full bg-[#ff5f56]"></span>
+                    <span class="w-3 h-3 rounded-full bg-[#ffbd2e]"></span>
+                    <span class="w-3 h-3 rounded-full bg-[#27c93f]"></span>
+                  </div>
+                  <!-- Code Tabs -->
+                  <div class="flex items-center gap-1">
+                    <button
+                      type="button"
+                      class="hero-code-tab px-2.5 py-1 text-[11px] font-mono rounded bg-slate-800 text-slate-200 font-medium transition-colors"
+                      data-tab="profile"
+                    >
+                      profile.ts
+                    </button>
+                    <button
+                      type="button"
+                      class="hero-code-tab px-2.5 py-1 text-[11px] font-mono rounded text-slate-400 hover:text-slate-200 transition-colors"
+                      data-tab="server"
+                    >
+                      server.js
+                    </button>
+                  </div>
+                  <span class="text-[10px] px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-800/80">
+                    online
+                  </span>
+                </div>
+
+                <!-- Code Pane 1: profile.ts -->
+                <div class="p-4 overflow-x-auto text-[11px] sm:text-xs leading-relaxed hero-code-pane" data-pane="profile">
+                  <pre class="space-y-1"><code><span class="text-purple-400">export const</span> <span class="text-blue-400">developer</span> = {
+  <span class="text-slate-400">name:</span> <span class="text-emerald-300">"Mohammed Rafique"</span>,
+  <span class="text-slate-400">role:</span> <span class="text-emerald-300">"Full Stack Developer"</span>,
+  <span class="text-slate-400">company:</span> <span class="text-emerald-300">"Schoollog (EdTech SaaS)"</span>,
+  <span class="text-slate-400">experience:</span> <span class="text-emerald-300">"2.5+ Years Production"</span>,
+  <span class="text-slate-400">stack:</span> {
+    <span class="text-slate-400">frontend:</span> [<span class="text-emerald-300">"React"</span>, <span class="text-emerald-300">"TypeScript"</span>, <span class="text-emerald-300">"Tailwind"</span>],
+    <span class="text-slate-400">backend:</span> [<span class="text-emerald-300">"Node.js"</span>, <span class="text-emerald-300">"Express"</span>, <span class="text-emerald-300">"REST APIs"</span>],
+    <span class="text-slate-400">database:</span> [<span class="text-emerald-300">"MongoDB"</span>, <span class="text-emerald-300">"Mongoose"</span>, <span class="text-emerald-300">"MySQL"</span>]
+  },
+  <span class="text-slate-400">status:</span> <span class="text-emerald-300">"Open to Engineering Roles"</span>
+};</code></pre>
+                </div>
+
+                <!-- Code Pane 2: server.js -->
+                <div class="p-4 overflow-x-auto text-[11px] sm:text-xs leading-relaxed hero-code-pane hidden" data-pane="server">
+                  <pre class="space-y-1"><code><span class="text-purple-400">import</span> express <span class="text-purple-400">from</span> <span class="text-emerald-300">"express"</span>;
+<span class="text-purple-400">const</span> app = <span class="text-blue-400">express</span>();
+
+app.<span class="text-blue-400">get</span>(<span class="text-emerald-300">"/api/v1/health"</span>, (req, res) => {
+  res.<span class="text-blue-400">status</span>(200).<span class="text-blue-400">json</span>({
+    status: <span class="text-emerald-300">"operational"</span>,
+    uptime: <span class="text-emerald-300">"99.98%"</span>,
+    latency: <span class="text-emerald-300">"14ms"</span>,
+    env: <span class="text-emerald-300">"production"</span>
+  });
+});</code></pre>
+                </div>
+
+                <!-- Terminal Health Response Strip -->
+                <div class="px-4 py-2.5 bg-[#161b22] border-t border-slate-800 text-[11px] text-slate-400 flex items-center justify-between">
+                  <div class="flex items-center gap-2 truncate">
+                    <span class="text-blue-400">$</span>
+                    <span class="truncate">curl -s https://api.rafique.dev/health</span>
+                  </div>
+                  <span class="text-emerald-400 shrink-0">200 OK</span>
+                </div>
               </div>
             </div>
           </div>
@@ -241,43 +326,44 @@
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="mb-8">
             <h2 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">About Me</h2>
-            <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Background, professional trajectory, and engineering approach.</p>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Engineering background, technical focus, and production experience.</p>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+            <!-- Narrative Column -->
             <div class="md:col-span-2 space-y-4 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
               <p>
-                I am a Full Stack Developer with <strong>2.5+ years of software engineering experience</strong>. Currently, I work at <strong>Schoollog</strong>, an EdTech SaaS company, where I engineer features across our school management ERP and web operating systems.
+                I am a Full Stack Developer with <strong>2.5+ years of software engineering experience</strong> building production web applications. Currently, I engineer core features across <strong>Schoollog</strong>, an EdTech SaaS company serving schools, teachers, and parents with daily ERP, attendance, fee, and communication workflows.
               </p>
               <p>
-                My path into software development was anchored by an engineering degree (B.Tech from Rajasthan Technical University) followed by an intensive 1,200+ hour full-stack development apprenticeship at Masai School. This combination gave me both strong algorithmic problem-solving foundations and hands-on production experience.
+                My technical path combines a Bachelor of Technology degree from Rajasthan Technical University (RTU Kota) with an intensive 1,200+ hour full-stack web development apprenticeship at Masai School. This grounded me with strong algorithmic problem-solving capabilities alongside practical, scalable software engineering practices.
               </p>
               <p>
-                I take pride in writing clean, modular code, optimizing web application performance (Core Web Vitals), designing well-documented REST APIs, and working closely with cross-functional product teams.
+                I prioritize writing clean, modular components, designing well-structured RESTful APIs with JWT authentication, optimizing web performance (Core Web Vitals), and collaborating closely within cross-functional Agile engineering teams.
               </p>
             </div>
 
-            <!-- Quick Facts Card -->
-            <div class="rounded-xl border border-slate-200 dark:border-slate-800 p-5 bg-slate-50/50 dark:bg-slate-900/40 text-xs sm:text-sm space-y-3">
+            <!-- Bento Quick Facts Card -->
+            <div class="rounded-xl border border-slate-200 dark:border-slate-800 p-5 bg-slate-50/50 dark:bg-slate-900/40 text-xs sm:text-sm space-y-3 flex flex-col justify-between">
               <div>
-                <span class="block text-slate-400 text-[11px] font-semibold uppercase tracking-wider">Current Role</span>
+                <span class="block text-slate-400 text-[11px] font-semibold uppercase tracking-wider mb-0.5">Current Role</span>
                 <span class="font-medium text-slate-900 dark:text-white">Software Engineer at Schoollog</span>
               </div>
               <div>
-                <span class="block text-slate-400 text-[11px] font-semibold uppercase tracking-wider">Location</span>
-                <span class="font-medium text-slate-900 dark:text-white">Rajasthan, India</span>
+                <span class="block text-slate-400 text-[11px] font-semibold uppercase tracking-wider mb-0.5">Production Experience</span>
+                <span class="font-medium text-slate-900 dark:text-white">2.5+ Years (EdTech SaaS)</span>
               </div>
               <div>
-                <span class="block text-slate-400 text-[11px] font-semibold uppercase tracking-wider">Education</span>
+                <span class="block text-slate-400 text-[11px] font-semibold uppercase tracking-wider mb-0.5">Education</span>
                 <span class="font-medium text-slate-900 dark:text-white">B.Tech, RTU Kota</span>
               </div>
               <div>
-                <span class="block text-slate-400 text-[11px] font-semibold uppercase tracking-wider">Core Stack</span>
+                <span class="block text-slate-400 text-[11px] font-semibold uppercase tracking-wider mb-0.5">Core Technologies</span>
                 <span class="font-medium text-slate-900 dark:text-white">React, Node.js, Express, MongoDB</span>
               </div>
               <div>
-                <span class="block text-slate-400 text-[11px] font-semibold uppercase tracking-wider">Certifications</span>
-                <span class="font-medium text-slate-900 dark:text-white">SEO Mastery Pro Certification</span>
+                <span class="block text-slate-400 text-[11px] font-semibold uppercase tracking-wider mb-0.5">Specialization</span>
+                <span class="font-medium text-slate-900 dark:text-white">Scalable Web Apps & REST APIs</span>
               </div>
             </div>
           </div>
@@ -298,7 +384,7 @@
             <!-- Position 1: Schoollog -->
             <div class="relative group">
               <div class="absolute -left-6 top-1.5 w-4 h-4 rounded-full bg-blue-600 ring-4 ring-white dark:ring-[#0b0d11]"></div>
-              <div class="rounded-xl border border-slate-200 dark:border-slate-800/80 p-5 sm:p-6 bg-white dark:bg-slate-900/40">
+              <div class="rounded-xl border border-slate-200 dark:border-slate-800/80 p-5 sm:p-6 bg-white dark:bg-slate-900/40 shadow-sm">
                 <div class="flex flex-wrap items-center justify-between gap-1 mb-2">
                   <div>
                     <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white">Full Stack Web Developer</h3>
@@ -328,7 +414,7 @@
             <!-- Position 2: Masai School -->
             <div class="relative group">
               <div class="absolute -left-6 top-1.5 w-4 h-4 rounded-full bg-slate-400 dark:bg-slate-600 ring-4 ring-white dark:ring-[#0b0d11]"></div>
-              <div class="rounded-xl border border-slate-200 dark:border-slate-800/80 p-5 sm:p-6 bg-white dark:bg-slate-900/40">
+              <div class="rounded-xl border border-slate-200 dark:border-slate-800/80 p-5 sm:p-6 bg-white dark:bg-slate-900/40 shadow-sm">
                 <div class="flex flex-wrap items-center justify-between gap-1 mb-2">
                   <div>
                     <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white">Full Stack Web Development Apprenticeship</h3>
@@ -340,7 +426,7 @@
                   Completed 1,200+ hours of full-time immersive programming curriculum covering Data Structures and Algorithms, modern JavaScript, and the MERN stack.
                 </p>
                 <ul class="space-y-1.5 text-xs sm:text-sm text-slate-600 dark:text-slate-300 list-disc list-inside mb-4">
-                  <li>Built 6+ major individual and collaborative team applications within strict deadlines.</li>
+                  <li>Built 6+ major individual and collaborative team applications within strict sprint deadlines.</li>
                   <li>Practiced Git branching workflows, peer code reviews, and remote team communication.</li>
                   <li>Received the Collaborative Project Success Award for team contributions.</li>
                 </ul>
@@ -355,7 +441,7 @@
             <!-- Position 3: Freelance -->
             <div class="relative group">
               <div class="absolute -left-6 top-1.5 w-4 h-4 rounded-full bg-slate-400 dark:bg-slate-600 ring-4 ring-white dark:ring-[#0b0d11]"></div>
-              <div class="rounded-xl border border-slate-200 dark:border-slate-800/80 p-5 sm:p-6 bg-white dark:bg-slate-900/40">
+              <div class="rounded-xl border border-slate-200 dark:border-slate-800/80 p-5 sm:p-6 bg-white dark:bg-slate-900/40 shadow-sm">
                 <div class="flex flex-wrap items-center justify-between gap-1 mb-2">
                   <div>
                     <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white">Freelance SEO & Web Optimization Specialist</h3>
@@ -369,7 +455,7 @@
                 <div class="flex flex-wrap gap-1.5 text-[11px] font-mono">
                   <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Technical SEO</span>
                   <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Google Analytics</span>
-                  <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">CRO</span>
+                  <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Web Performance</span>
                 </div>
               </div>
             </div>
@@ -377,7 +463,7 @@
             <!-- Position 4: RTU Kota -->
             <div class="relative group">
               <div class="absolute -left-6 top-1.5 w-4 h-4 rounded-full bg-slate-300 dark:bg-slate-700 ring-4 ring-white dark:ring-[#0b0d11]"></div>
-              <div class="rounded-xl border border-slate-200 dark:border-slate-800/80 p-5 sm:p-6 bg-white dark:bg-slate-900/40">
+              <div class="rounded-xl border border-slate-200 dark:border-slate-800/80 p-5 sm:p-6 bg-white dark:bg-slate-900/40 shadow-sm">
                 <div class="flex flex-wrap items-center justify-between gap-1 mb-1">
                   <div>
                     <h3 class="text-base font-bold text-slate-900 dark:text-white">Bachelor of Technology (B.Tech) - Civil Engineering</h3>
@@ -392,278 +478,426 @@
       </section>
 
       <!-- ======================================================================
-           5. Projects Section
+           5. Featured Projects Section
            ====================================================================== -->
-      <section id="projects" class="w-full py-16 sm:py-20 border-b border-slate-200 dark:border-slate-800/80">
+      <section id="projects" class="w-full py-16 sm:py-24 border-b border-slate-200 dark:border-slate-800/80">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
-            <div>
-              <h2 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">Featured Projects</h2>
-              <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Applications built with modern frontend and backend technologies.</p>
+          <div class="mb-10 text-left">
+            <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full text-xs font-medium bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-800/80 mb-2">
+              Production Work
             </div>
-
-            <!-- Project Filter Controls -->
-            <div class="flex flex-wrap gap-1.5 projects-filter-nav" role="tablist" aria-label="Projects filter">
-              <button class="filter-btn active px-3 py-1 rounded-md text-xs font-semibold bg-blue-600 text-white transition-colors" data-project-filter="all" type="button" role="tab" aria-selected="true">All</button>
-              <button class="filter-btn px-3 py-1 rounded-md text-xs font-medium border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors" data-project-filter="fullstack" type="button" role="tab" aria-selected="false">Full Stack</button>
-              <button class="filter-btn px-3 py-1 rounded-md text-xs font-medium border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors" data-project-filter="frontend" type="button" role="tab" aria-selected="false">Frontend</button>
-              <button class="filter-btn px-3 py-1 rounded-md text-xs font-medium border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors" data-project-filter="ai" type="button" role="tab" aria-selected="false">AI</button>
-              <button class="filter-btn px-3 py-1 rounded-md text-xs font-medium border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors" data-project-filter="ecommerce" type="button" role="tab" aria-selected="false">E-Commerce</button>
-            </div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white tracking-tight">Featured Projects</h2>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Key applications built across frontend workflows, RESTful backends, and persistent databases.</p>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 projects-grid">
-            <!-- Project 1: Chatbot Flow Builder -->
-            <article class="project-card border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden bg-white dark:bg-slate-900/40 flex flex-col justify-between" data-project-cat="frontend">
+          <!-- Top 3 Featured Projects Showcase Grid -->
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+            <!-- Featured Project 1: Chatbot Flow Builder -->
+            <article class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 overflow-hidden shadow-sm hover:border-blue-500 dark:hover:border-blue-500 transition-all flex flex-col justify-between group">
               <div>
-                <div class="w-full aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-800">
+                <div class="w-full aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-800 relative">
                   <img
                     src="assets/chatbot_flow_homepage.png"
-                    alt="Chatbot flow builder interface"
-                    class="w-full h-full object-cover"
+                    alt="Chatbot Flow Builder application preview"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"
                   />
+                  <span class="absolute top-3 right-3 text-[10px] font-mono font-semibold px-2 py-0.5 rounded bg-blue-600 text-white shadow">
+                    Frontend & Flow
+                  </span>
                 </div>
-                <div class="p-5">
-                  <h3 class="font-bold text-base text-slate-900 dark:text-white mb-1.5">Chatbot Flow Builder</h3>
-                  <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
-                    Visual node-based chatbot flow designer built using React Flow. Enables drag-and-drop conversation building, custom branch handles, and JSON flow export.
+                <div class="p-6">
+                  <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Chatbot Flow Builder</h3>
+                  <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+                    Visual node-based chatbot flow designer built with React Flow. Solves the complexity of managing conversational branching logic in static JSON by providing an interactive visual canvas.
                   </p>
-                  <div class="flex flex-wrap gap-1 text-[11px] font-mono text-slate-500 dark:text-slate-400 mb-4">
-                    <span>React.js</span> • <span>React Flow</span> • <span>Vite</span>
+
+                  <!-- Key Features Highlight -->
+                  <div class="mb-4 space-y-1.5 text-xs text-slate-600 dark:text-slate-300">
+                    <div class="flex items-start gap-1.5">
+                      <span class="text-blue-500 font-bold">•</span>
+                      <span>Drag-and-drop conversational canvas with zoom/pan</span>
+                    </div>
+                    <div class="flex items-start gap-1.5">
+                      <span class="text-blue-500 font-bold">•</span>
+                      <span>Real-time disconnected node validation</span>
+                    </div>
+                    <div class="flex items-start gap-1.5">
+                      <span class="text-blue-500 font-bold">•</span>
+                      <span>Single-click JSON schema export & import</span>
+                    </div>
+                  </div>
+
+                  <!-- Stack Badges -->
+                  <div class="flex flex-wrap gap-1.5 text-[11px] font-mono text-slate-500 dark:text-slate-400">
+                    <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">React.js</span>
+                    <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">React Flow</span>
+                    <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">Vite</span>
+                    <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">Tailwind</span>
                   </div>
                 </div>
               </div>
-              <div class="px-5 pb-5 pt-0 flex items-center gap-3">
-                <a
-                  href="https://chatbot-flow-builder-seven-eta.vercel.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1"
+
+              <!-- Card Action Links -->
+              <div class="px-6 pb-6 pt-2 flex flex-wrap items-center justify-between gap-2 border-t border-slate-100 dark:border-slate-800/80">
+                <div class="flex items-center gap-3">
+                  <a
+                    href="https://chatbot-flow-builder-seven-eta.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center gap-1"
+                  >
+                    <span>Live Demo</span> →
+                  </a>
+                  <a
+                    href="https://github.com/Mohammmedrafique/Chatbot-flow-builder"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-xs font-medium text-slate-500 hover:text-slate-900 dark:hover:text-white"
+                  >
+                    GitHub
+                  </a>
+                </div>
+                <button
+                  type="button"
+                  data-project-modal="chatbot-flow"
+                  class="text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 inline-flex items-center gap-1"
                 >
-                  <span>Live Demo</span> →
-                </a>
-                <a
-                  href="https://github.com/Mohammmedrafique/Chatbot-flow-builder"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-xs font-medium text-slate-500 hover:text-slate-900 dark:hover:text-white"
-                >
-                  GitHub Code
-                </a>
+                  <span>Details</span>
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </button>
               </div>
             </article>
 
-            <!-- Project 2: AI Virtual Interview Assistant -->
-            <article class="project-card border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden bg-white dark:bg-slate-900/40 flex flex-col justify-between" data-project-cat="ai">
+            <!-- Featured Project 2: Full-Stack Blog Platform -->
+            <article class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 overflow-hidden shadow-sm hover:border-blue-500 dark:hover:border-blue-500 transition-all flex flex-col justify-between group">
               <div>
-                <div class="w-full aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-800">
-                  <img
-                    src="assets/Student.png"
-                    alt="AI Virtual Interview Assistant"
-                    class="w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="p-5">
-                  <h3 class="font-bold text-base text-slate-900 dark:text-white mb-1.5">AI Virtual Interview Assistant</h3>
-                  <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
-                    Virtual interview assistant simulating real technical interview scenarios. Uses OpenAI API and natural language processing to evaluate responses and provide feedback.
-                  </p>
-                  <div class="flex flex-wrap gap-1 text-[11px] font-mono text-slate-500 dark:text-slate-400 mb-4">
-                    <span>React</span> • <span>Node.js</span> • <span>OpenAI API</span>
-                  </div>
-                </div>
-              </div>
-              <div class="px-5 pb-5 pt-0 flex items-center gap-3">
-                <a
-                  href="https://github.com/Mohammmedrafique"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1"
-                >
-                  <span>View Details</span> →
-                </a>
-                <a
-                  href="https://github.com/Mohammmedrafique"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-xs font-medium text-slate-500 hover:text-slate-900 dark:hover:text-white"
-                >
-                  GitHub Code
-                </a>
-              </div>
-            </article>
-
-            <!-- Project 3: Full-Stack Blog Platform -->
-            <article class="project-card border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden bg-white dark:bg-slate-900/40 flex flex-col justify-between" data-project-cat="fullstack">
-              <div>
-                <div class="w-full aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-800">
+                <div class="w-full aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-800 relative">
                   <img
                     src="assets/masai_homepage.png"
-                    alt="Full-Stack Blog application screenshot"
-                    class="w-full h-full object-cover"
+                    alt="Full-Stack Blog Platform application preview"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"
                   />
+                  <span class="absolute top-3 right-3 text-[10px] font-mono font-semibold px-2 py-0.5 rounded bg-blue-600 text-white shadow">
+                    Full Stack MERN
+                  </span>
                 </div>
-                <div class="p-5">
-                  <h3 class="font-bold text-base text-slate-900 dark:text-white mb-1.5">Full-Stack Blog Platform</h3>
-                  <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
-                    Blogging application built with MongoDB, Express, React, and Node.js. Includes JWT user authentication, article management, comments, and post likes.
+                <div class="p-6">
+                  <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Full-Stack Blog Platform</h3>
+                  <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+                    Production-style MERN publishing and community platform with JWT authorization, secure sessions, indexed article queries, and threaded comment workflows.
                   </p>
-                  <div class="flex flex-wrap gap-1 text-[11px] font-mono text-slate-500 dark:text-slate-400 mb-4">
-                    <span>MongoDB</span> • <span>Express</span> • <span>React</span> • <span>Node.js</span>
+
+                  <!-- Key Features Highlight -->
+                  <div class="mb-4 space-y-1.5 text-xs text-slate-600 dark:text-slate-300">
+                    <div class="flex items-start gap-1.5">
+                      <span class="text-blue-500 font-bold">•</span>
+                      <span>Secure JWT user auth with bcrypt password hashing</span>
+                    </div>
+                    <div class="flex items-start gap-1.5">
+                      <span class="text-blue-500 font-bold">•</span>
+                      <span>Complete article CRUD, markdown, and category tags</span>
+                    </div>
+                    <div class="flex items-start gap-1.5">
+                      <span class="text-blue-500 font-bold">•</span>
+                      <span>Indexed MongoDB queries for fast article pagination</span>
+                    </div>
+                  </div>
+
+                  <!-- Stack Badges -->
+                  <div class="flex flex-wrap gap-1.5 text-[11px] font-mono text-slate-500 dark:text-slate-400">
+                    <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">MongoDB</span>
+                    <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">Express.js</span>
+                    <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">React.js</span>
+                    <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">Node.js</span>
                   </div>
                 </div>
               </div>
-              <div class="px-5 pb-5 pt-0 flex items-center gap-3">
-                <a
-                  href="https://blog-web-app-qbvk.vercel.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1"
+
+              <!-- Card Action Links -->
+              <div class="px-6 pb-6 pt-2 flex flex-wrap items-center justify-between gap-2 border-t border-slate-100 dark:border-slate-800/80">
+                <div class="flex items-center gap-3">
+                  <a
+                    href="https://blog-web-app-qbvk.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center gap-1"
+                  >
+                    <span>Live Demo</span> →
+                  </a>
+                  <a
+                    href="https://github.com/Mohammmedrafique/Blog_web_app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-xs font-medium text-slate-500 hover:text-slate-900 dark:hover:text-white"
+                  >
+                    GitHub
+                  </a>
+                </div>
+                <button
+                  type="button"
+                  data-project-modal="blog-platform"
+                  class="text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 inline-flex items-center gap-1"
                 >
-                  <span>Live Demo</span> →
-                </a>
-                <a
-                  href="https://github.com/Mohammmedrafique/Blog_web_app"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-xs font-medium text-slate-500 hover:text-slate-900 dark:hover:text-white"
-                >
-                  GitHub Code
-                </a>
+                  <span>Details</span>
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </button>
               </div>
             </article>
 
-            <!-- Project 4: Full Stack Task Manager -->
-            <article class="project-card border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden bg-white dark:bg-slate-900/40 flex flex-col justify-between" data-project-cat="fullstack">
+            <!-- Featured Project 3: Full Stack Task Manager -->
+            <article class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 overflow-hidden shadow-sm hover:border-blue-500 dark:hover:border-blue-500 transition-all flex flex-col justify-between group">
               <div>
-                <div class="w-full aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-800">
+                <div class="w-full aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-800 relative">
                   <img
                     src="assets/task_homepage.png"
-                    alt="Task Manager application screenshot"
-                    class="w-full h-full object-cover"
+                    alt="Task Manager application preview"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"
                   />
+                  <span class="absolute top-3 right-3 text-[10px] font-mono font-semibold px-2 py-0.5 rounded bg-blue-600 text-white shadow">
+                    Productivity MERN
+                  </span>
                 </div>
-                <div class="p-5">
-                  <h3 class="font-bold text-base text-slate-900 dark:text-white mb-1.5">Full Stack Task Manager</h3>
-                  <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
-                    Task workflow tool featuring task creation, status updates, priority sorting, and personal dashboards powered by a MERN backend.
+                <div class="p-6">
+                  <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Full Stack Task Manager</h3>
+                  <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+                    Agile task management tool with dynamic status lifecycles (Backlog, In Progress, Completed), priority queuing, and user-scoped MongoDB persistence.
                   </p>
-                  <div class="flex flex-wrap gap-1 text-[11px] font-mono text-slate-500 dark:text-slate-400 mb-4">
-                    <span>React</span> • <span>Node.js</span> • <span>Express</span> • <span>MongoDB</span>
-                  </div>
-                </div>
-              </div>
-              <div class="px-5 pb-5 pt-0 flex items-center gap-3">
-                <a
-                  href="https://task-manager-srex.vercel.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1"
-                >
-                  <span>Live Demo</span> →
-                </a>
-                <a
-                  href="https://github.com/Mohammmedrafique/task_manager"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-xs font-medium text-slate-500 hover:text-slate-900 dark:hover:text-white"
-                >
-                  GitHub Code
-                </a>
-              </div>
-            </article>
 
-            <!-- Project 5: FurnitureCraft -->
-            <article class="project-card border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden bg-white dark:bg-slate-900/40 flex flex-col justify-between" data-project-cat="ecommerce">
-              <div>
-                <div class="w-full aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-800">
-                  <img
-                    src="assets/projectpic/furniturecraft.png"
-                    alt="FurnitureCraft platform screenshot"
-                    class="w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="p-5">
-                  <h3 class="font-bold text-base text-slate-900 dark:text-white mb-1.5">FurnitureCraft Online Store</h3>
-                  <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
-                    Furniture e-commerce store with product category filtering, price range sliders, shopping cart state management, and TypeScript types.
-                  </p>
-                  <div class="flex flex-wrap gap-1 text-[11px] font-mono text-slate-500 dark:text-slate-400 mb-4">
-                    <span>TypeScript</span> • <span>React</span> • <span>Express</span> • <span>MongoDB</span>
+                  <!-- Key Features Highlight -->
+                  <div class="mb-4 space-y-1.5 text-xs text-slate-600 dark:text-slate-300">
+                    <div class="flex items-start gap-1.5">
+                      <span class="text-blue-500 font-bold">•</span>
+                      <span>Task lifecycle management with real-time state sync</span>
+                    </div>
+                    <div class="flex items-start gap-1.5">
+                      <span class="text-blue-500 font-bold">•</span>
+                      <span>Multi-criteria filtering by priority, status, & search</span>
+                    </div>
+                    <div class="flex items-start gap-1.5">
+                      <span class="text-blue-500 font-bold">•</span>
+                      <span>Protected REST APIs with Express request validation</span>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div class="px-5 pb-5 pt-0 flex items-center gap-3">
-                <a
-                  href="https://furniture-craft.vercel.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1"
-                >
-                  <span>Live Demo</span> →
-                </a>
-                <a
-                  href="https://github.com/Mohammmedrafique/furniture-craft"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-xs font-medium text-slate-500 hover:text-slate-900 dark:hover:text-white"
-                >
-                  GitHub Code
-                </a>
-              </div>
-            </article>
 
-            <!-- Project 6: FitQuest -->
-            <article class="project-card border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden bg-white dark:bg-slate-900/40 flex flex-col justify-between" data-project-cat="fullstack">
-              <div>
-                <div class="w-full aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-800">
-                  <img
-                    src="assets/projectpic/280637609-37cae2d2-ba2d-49ac-b3fc-1dac772c29d4.png"
-                    alt="FitQuest platform screenshot"
-                    class="w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="p-5">
-                  <h3 class="font-bold text-base text-slate-900 dark:text-white mb-1.5">FitQuest - Gamify Fitness</h3>
-                  <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
-                    Fitness tracking and gamification platform built in a 4-person Agile sprint. Features challenge tracking, leaderboards, and social progress feeds.
-                  </p>
-                  <div class="flex flex-wrap gap-1 text-[11px] font-mono text-slate-500 dark:text-slate-400 mb-4">
-                    <span>React</span> • <span>Node.js</span> • <span>Express</span> • <span>MongoDB</span>
+                  <!-- Stack Badges -->
+                  <div class="flex flex-wrap gap-1.5 text-[11px] font-mono text-slate-500 dark:text-slate-400">
+                    <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">React.js</span>
+                    <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">Node.js</span>
+                    <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">Express.js</span>
+                    <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">MongoDB</span>
                   </div>
                 </div>
               </div>
-              <div class="px-5 pb-5 pt-0 flex items-center gap-3">
-                <a
-                  href="https://posh-division-4370.vercel.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1"
+
+              <!-- Card Action Links -->
+              <div class="px-6 pb-6 pt-2 flex flex-wrap items-center justify-between gap-2 border-t border-slate-100 dark:border-slate-800/80">
+                <div class="flex items-center gap-3">
+                  <a
+                    href="https://task-manager-srex.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center gap-1"
+                  >
+                    <span>Live Demo</span> →
+                  </a>
+                  <a
+                    href="https://github.com/Mohammmedrafique/task_manager"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-xs font-medium text-slate-500 hover:text-slate-900 dark:hover:text-white"
+                  >
+                    GitHub
+                  </a>
+                </div>
+                <button
+                  type="button"
+                  data-project-modal="task-manager"
+                  class="text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 inline-flex items-center gap-1"
                 >
-                  <span>Live Demo</span> →
-                </a>
-                <a
-                  href="https://github.com/audacity07/posh-division-4370.git"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-xs font-medium text-slate-500 hover:text-slate-900 dark:hover:text-white"
-                >
-                  GitHub Code
-                </a>
+                  <span>Details</span>
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </button>
               </div>
             </article>
+          </div>
+
+          <!-- Secondary Section: Additional Engineering Projects -->
+          <div class="pt-8 border-t border-slate-200 dark:border-slate-800">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white tracking-tight">Additional Engineering Work</h3>
+                <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">E-commerce, AI integrations, and team-built web applications.</p>
+              </div>
+
+              <!-- Category Filter Tabs -->
+              <div class="flex flex-wrap gap-1.5 projects-filter-nav" role="tablist" aria-label="Projects filter">
+                <button class="filter-btn active px-3 py-1 rounded-md text-xs font-semibold bg-blue-600 text-white transition-colors" data-project-filter="all" type="button" role="tab" aria-selected="true">All</button>
+                <button class="filter-btn px-3 py-1 rounded-md text-xs font-medium border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors" data-project-filter="ecommerce" type="button" role="tab" aria-selected="false">E-Commerce</button>
+                <button class="filter-btn px-3 py-1 rounded-md text-xs font-medium border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors" data-project-filter="ai" type="button" role="tab" aria-selected="false">AI</button>
+                <button class="filter-btn px-3 py-1 rounded-md text-xs font-medium border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors" data-project-filter="fullstack" type="button" role="tab" aria-selected="false">Team Apps</button>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 projects-grid">
+              <!-- Additional Project 1: FurnitureCraft -->
+              <article class="project-card border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden bg-white dark:bg-slate-900/40 flex flex-col justify-between" data-project-cat="ecommerce">
+                <div>
+                  <div class="w-full aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-800">
+                    <img
+                      src="assets/projectpic/furniturecraft.png"
+                      alt="FurnitureCraft online store screenshot"
+                      class="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="p-5">
+                    <h4 class="font-bold text-base text-slate-900 dark:text-white mb-1.5">FurnitureCraft Online Store</h4>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+                      Furniture e-commerce store with product category filtering, price range sliders, shopping cart state management, and strict TypeScript types.
+                    </p>
+                    <div class="flex flex-wrap gap-1 text-[11px] font-mono text-slate-500 dark:text-slate-400 mb-3">
+                      <span>TypeScript</span> • <span>React</span> • <span>MongoDB</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="px-5 pb-5 pt-0 flex items-center justify-between">
+                  <div class="flex items-center gap-3">
+                    <a
+                      href="https://shoppage.vercel.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline"
+                    >
+                      Demo →
+                    </a>
+                    <a
+                      href="https://github.com/Mohammmedrafique"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-xs font-medium text-slate-500 hover:text-slate-900 dark:hover:text-white"
+                    >
+                      GitHub
+                    </a>
+                  </div>
+                  <button
+                    type="button"
+                    data-project-modal="furniturecraft"
+                    class="text-xs font-semibold text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400"
+                  >
+                    Case Study
+                  </button>
+                </div>
+              </article>
+
+              <!-- Additional Project 2: AI Virtual Interview Assistant -->
+              <article class="project-card border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden bg-white dark:bg-slate-900/40 flex flex-col justify-between" data-project-cat="ai">
+                <div>
+                  <div class="w-full aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-800">
+                    <img
+                      src="assets/Student.png"
+                      alt="AI Virtual Interview Assistant screenshot"
+                      class="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="p-5">
+                    <h4 class="font-bold text-base text-slate-900 dark:text-white mb-1.5">AI Virtual Interview Assistant</h4>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+                      Technical interview simulator powered by OpenAI API. Evaluates candidate answers in real time and provides structured conceptual feedback.
+                    </p>
+                    <div class="flex flex-wrap gap-1 text-[11px] font-mono text-slate-500 dark:text-slate-400 mb-3">
+                      <span>React</span> • <span>Node.js</span> • <span>OpenAI API</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="px-5 pb-5 pt-0 flex items-center justify-between">
+                  <div class="flex items-center gap-3">
+                    <a
+                      href="https://github.com/Mohammmedrafique"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline"
+                    >
+                      Details →
+                    </a>
+                    <a
+                      href="https://github.com/Mohammmedrafique"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-xs font-medium text-slate-500 hover:text-slate-900 dark:hover:text-white"
+                    >
+                      GitHub
+                    </a>
+                  </div>
+                  <button
+                    type="button"
+                    data-project-modal="ai-interview"
+                    class="text-xs font-semibold text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400"
+                  >
+                    Case Study
+                  </button>
+                </div>
+              </article>
+
+              <!-- Additional Project 3: FitQuest -->
+              <article class="project-card border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden bg-white dark:bg-slate-900/40 flex flex-col justify-between" data-project-cat="fullstack">
+                <div>
+                  <div class="w-full aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-800">
+                    <img
+                      src="assets/projectpic/280637609-37cae2d2-ba2d-49ac-b3fc-1dac772c29d4.png"
+                      alt="FitQuest application screenshot"
+                      class="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="p-5">
+                    <h4 class="font-bold text-base text-slate-900 dark:text-white mb-1.5">FitQuest - Gamify Fitness</h4>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+                      Fitness gamification platform built in a 4-person Agile sprint. Features challenge streaks, leaderboards, and social feeds.
+                    </p>
+                    <div class="flex flex-wrap gap-1 text-[11px] font-mono text-slate-500 dark:text-slate-400 mb-3">
+                      <span>React</span> • <span>Express</span> • <span>MongoDB</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="px-5 pb-5 pt-0 flex items-center justify-between">
+                  <div class="flex items-center gap-3">
+                    <a
+                      href="https://posh-division-4370.vercel.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline"
+                    >
+                      Demo →
+                    </a>
+                    <a
+                      href="https://github.com/audacity07/posh-division-4370.git"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-xs font-medium text-slate-500 hover:text-slate-900 dark:hover:text-white"
+                    >
+                      GitHub
+                    </a>
+                  </div>
+                  <button
+                    type="button"
+                    data-project-modal="fitquest"
+                    class="text-xs font-semibold text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400"
+                  >
+                    Case Study
+                  </button>
+                </div>
+              </article>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- ======================================================================
-           6. Skills Section
+           6. Skills & Tech Stack Section
            ====================================================================== -->
       <section id="skills" class="w-full py-16 sm:py-20 border-b border-slate-200 dark:border-slate-800/80">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -675,51 +909,63 @@
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <!-- Frontend -->
             <div class="rounded-xl border border-slate-200 dark:border-slate-800 p-5 bg-white dark:bg-slate-900/40">
-              <h3 class="font-bold text-sm text-slate-900 dark:text-white mb-3">Frontend</h3>
+              <h3 class="font-bold text-sm text-slate-900 dark:text-white mb-3 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+                <span>Frontend</span>
+              </h3>
               <ul class="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>React.js / Next.js</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>JavaScript (ES6+)</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>TypeScript</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>HTML5 / Semantic Web</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>CSS3 / Tailwind CSS</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>Redux / Context API</li>
+                <li class="flex items-center gap-2 font-mono">React.js</li>
+                <li class="flex items-center gap-2 font-mono">JavaScript (ES6+)</li>
+                <li class="flex items-center gap-2 font-mono">TypeScript</li>
+                <li class="flex items-center gap-2 font-mono">HTML5 / Semantic Web</li>
+                <li class="flex items-center gap-2 font-mono">CSS3 / Tailwind CSS</li>
+                <li class="flex items-center gap-2 font-mono">Redux / Context API</li>
               </ul>
             </div>
 
-            <!-- Backend -->
+            <!-- Backend & APIs -->
             <div class="rounded-xl border border-slate-200 dark:border-slate-800 p-5 bg-white dark:bg-slate-900/40">
-              <h3 class="font-bold text-sm text-slate-900 dark:text-white mb-3">Backend & APIs</h3>
+              <h3 class="font-bold text-sm text-slate-900 dark:text-white mb-3 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                <span>Backend & APIs</span>
+              </h3>
               <ul class="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>Node.js</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>Express.js</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>RESTful API Design</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>JWT Authentication</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>Middleware & Validation</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>Postman / Swagger</li>
+                <li class="flex items-center gap-2 font-mono">Node.js</li>
+                <li class="flex items-center gap-2 font-mono">Express.js</li>
+                <li class="flex items-center gap-2 font-mono">RESTful API Design</li>
+                <li class="flex items-center gap-2 font-mono">JWT Authentication</li>
+                <li class="flex items-center gap-2 font-mono">Middleware & Validation</li>
+                <li class="flex items-center gap-2 font-mono">Postman / Swagger</li>
               </ul>
             </div>
 
-            <!-- Databases & DevOps -->
+            <!-- Databases -->
             <div class="rounded-xl border border-slate-200 dark:border-slate-800 p-5 bg-white dark:bg-slate-900/40">
-              <h3 class="font-bold text-sm text-slate-900 dark:text-white mb-3">Databases & DevOps</h3>
+              <h3 class="font-bold text-sm text-slate-900 dark:text-white mb-3 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-indigo-500"></span>
+                <span>Databases</span>
+              </h3>
               <ul class="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>MongoDB & Mongoose</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>MySQL</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>Git & GitHub</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>Vercel & Netlify</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>Docker basics</li>
+                <li class="flex items-center gap-2 font-mono">MongoDB & Mongoose</li>
+                <li class="flex items-center gap-2 font-mono">MySQL</li>
+                <li class="flex items-center gap-2 font-mono">Schema Design</li>
+                <li class="flex items-center gap-2 font-mono">Aggregation Pipelines</li>
+                <li class="flex items-center gap-2 font-mono">Query Indexing</li>
               </ul>
             </div>
 
-            <!-- Practices -->
+            <!-- Tools & DevOps -->
             <div class="rounded-xl border border-slate-200 dark:border-slate-800 p-5 bg-white dark:bg-slate-900/40">
-              <h3 class="font-bold text-sm text-slate-900 dark:text-white mb-3">Practices</h3>
+              <h3 class="font-bold text-sm text-slate-900 dark:text-white mb-3 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                <span>Tools & DevOps</span>
+              </h3>
               <ul class="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>Data Structures & Algorithms</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>Core Web Vitals Optimization</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>Agile / Scrum Sprints</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>Code Reviews & Git Flow</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>Accessibility (a11y)</li>
+                <li class="flex items-center gap-2 font-mono">Git & GitHub</li>
+                <li class="flex items-center gap-2 font-mono">Vercel & Netlify</li>
+                <li class="flex items-center gap-2 font-mono">VS Code</li>
+                <li class="flex items-center gap-2 font-mono">Vite Bundler</li>
+                <li class="flex items-center gap-2 font-mono">Agile / Scrum Sprints</li>
               </ul>
             </div>
           </div>
@@ -727,22 +973,36 @@
       </section>
 
       <!-- ======================================================================
-           7. GitHub Activity Section
+           7. GitHub Section (Secondary & Compact)
            ====================================================================== -->
       <section id="github" class="w-full py-16 sm:py-20 border-b border-slate-200 dark:border-slate-800/80">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="mb-8">
-            <h2 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">GitHub Activity</h2>
-            <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Open-source contributions and repository metrics.</p>
+          <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+            <div>
+              <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 mb-2">
+                Open Source
+              </div>
+              <h2 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">GitHub Activity</h2>
+              <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Repository metrics and open-source contributions.</p>
+            </div>
+            <a
+              href="https://github.com/Mohammmedrafique"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center gap-1.5"
+            >
+              <span>View GitHub Profile</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            </a>
           </div>
 
           <div class="space-y-6">
-            <!-- Calendar -->
+            <!-- Compact Contribution Graph Card -->
             <div class="rounded-xl border border-slate-200 dark:border-slate-800 p-5 bg-white dark:bg-slate-900/40 text-center">
               <div class="overflow-x-auto py-2">
                 <img
                   src="https://ghchart.rshah.org/Mohammmedrafique"
-                  alt="Mohammmedrafique's GitHub contribution chart"
+                  alt="Mohammed Rafique's GitHub contribution chart"
                   class="mx-auto rounded max-w-full"
                   loading="lazy"
                   width="850"
@@ -751,62 +1011,83 @@
               </div>
             </div>
 
-            <!-- Cards -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div class="rounded-xl border border-slate-200 dark:border-slate-800 p-4 bg-white dark:bg-slate-900/40 flex items-center justify-center">
-                <img
-                  id="github-top-langs"
-                  src="https://github-readme-stats.vercel.app/api/top-langs/?username=mohammmedrafique&custom_title=Top+Languages&theme=radical&show_icons=true&locale=en&layout=compact"
-                  alt="Top Languages"
-                  loading="lazy"
-                  class="max-w-full h-auto"
-                  width="360"
-                  height="180"
-                />
-              </div>
+            <!-- Repository Quick Highlights -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <a
+                href="https://github.com/Mohammmedrafique/Chatbot-flow-builder"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/40 hover:border-blue-500 dark:hover:border-blue-500 transition-all group"
+              >
+                <div class="flex items-center justify-between mb-2">
+                  <span class="font-mono text-xs font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors truncate">
+                    Chatbot-flow-builder
+                  </span>
+                  <span class="text-xs text-slate-400 group-hover:translate-x-0.5 transition-transform">→</span>
+                </div>
+                <p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-2">Visual node-based chatbot flow designer with React Flow and Vite.</p>
+              </a>
 
-              <div class="rounded-xl border border-slate-200 dark:border-slate-800 p-4 bg-white dark:bg-slate-900/40 flex items-center justify-center">
-                <img
-                  id="github-stats-card"
-                  src="https://github-readme-stats.vercel.app/api?username=mohammmedrafique&theme=radical&show_icons=true&locale=en"
-                  alt="GitHub Overall Stats"
-                  loading="lazy"
-                  class="max-w-full h-auto"
-                  width="360"
-                  height="180"
-                />
-              </div>
+              <a
+                href="https://github.com/Mohammmedrafique/Blog_web_app"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/40 hover:border-blue-500 dark:hover:border-blue-500 transition-all group"
+              >
+                <div class="flex items-center justify-between mb-2">
+                  <span class="font-mono text-xs font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors truncate">
+                    Blog_web_app
+                  </span>
+                  <span class="text-xs text-slate-400 group-hover:translate-x-0.5 transition-transform">→</span>
+                </div>
+                <p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-2">MERN stack blogging platform with JWT authentication and CRUD.</p>
+              </a>
+
+              <a
+                href="https://github.com/Mohammmedrafique/task_manager"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/40 hover:border-blue-500 dark:hover:border-blue-500 transition-all group"
+              >
+                <div class="flex items-center justify-between mb-2">
+                  <span class="font-mono text-xs font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors truncate">
+                    task_manager
+                  </span>
+                  <span class="text-xs text-slate-400 group-hover:translate-x-0.5 transition-transform">→</span>
+                </div>
+                <p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-2">Task workflow and productivity tool backed by Express & MongoDB.</p>
+              </a>
             </div>
           </div>
         </div>
       </section>
 
       <!-- ======================================================================
-           8. Contact Section (Symmetric Dual-Card Layout)
+           8. Contact Section (Strong Final CTA & Symmetrical Cards)
            ====================================================================== -->
       <section id="contact" class="w-full py-16 sm:py-24 border-b border-slate-200 dark:border-slate-800/80 bg-slate-50/40 dark:bg-[#0c0e12]/60">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <!-- Section Heading (Balanced & Clean) -->
+          <!-- Final CTA Header -->
           <div class="text-center max-w-xl mx-auto mb-12">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800/60 mb-3">
               <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-              <span>Open to Full-Stack & Engineering Roles</span>
+              <span>Available for Full-Stack Roles</span>
             </div>
-            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white tracking-tight">Contact Me</h2>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">Let's build something together.</h2>
             <p class="text-sm text-slate-600 dark:text-slate-400 mt-2">
-              Have an opportunity, project inquiry, or question? Feel free to reach out directly or send a message.
+              Whether you have a full-stack role, technical inquiry, or want to connect about web systems, feel free to reach out directly or send a message.
             </p>
           </div>
 
-          <!-- Dual Symmetrical Cards (Equal Height, Equal Width, Aligned) -->
+          <!-- Dual Symmetrical Cards -->
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
-            <!-- Left Card: Contact Information -->
+            <!-- Left Card: Direct Communication Channels -->
             <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/70 p-6 sm:p-8 flex flex-col justify-between shadow-sm">
               <div>
                 <div class="flex items-center justify-between pb-4 mb-6 border-b border-slate-100 dark:border-slate-800">
                   <div>
                     <h3 class="font-bold text-base text-slate-900 dark:text-white">Direct Reach</h3>
-                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Contact me directly via email, phone, or WhatsApp.</p>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Contact me directly via email, phone, or LinkedIn.</p>
                   </div>
                   <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">
                     India (IST)
@@ -814,7 +1095,7 @@
                 </div>
 
                 <div class="space-y-3.5">
-                  <!-- Email Box -->
+                  <!-- Email Box with 1-Click Copy -->
                   <div class="p-4 rounded-xl border border-slate-200/80 dark:border-slate-800 bg-slate-50/60 dark:bg-slate-800/40 flex items-center justify-between gap-3">
                     <div class="flex items-center gap-3 min-w-0">
                       <div class="w-10 h-10 rounded-lg bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 flex items-center justify-center shrink-0">
@@ -836,14 +1117,28 @@
                       id="copy-email-btn"
                       data-email="Kota.mohdrafiq@gmail.com"
                       class="shrink-0 px-2.5 py-1.5 rounded-md text-xs font-medium border border-slate-200 dark:border-slate-700 hover:bg-white dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 transition-colors flex items-center gap-1.5"
-                      aria-label="Copy email address"
+                      aria-label="Copy email address to clipboard"
                     >
                       <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
                       <span id="copy-email-text">Copy</span>
                     </button>
                   </div>
 
-                  <!-- Phone & WhatsApp Box -->
+                  <!-- Location Box -->
+                  <div class="p-4 rounded-xl border border-slate-200/80 dark:border-slate-800 bg-slate-50/60 dark:bg-slate-800/40 flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center shrink-0">
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    </div>
+                    <div>
+                      <span class="block text-[11px] font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500">Location</span>
+                      <span class="text-xs sm:text-sm font-semibold text-slate-900 dark:text-white block">
+                        Rajasthan, India
+                      </span>
+                      <span class="text-[11px] text-slate-500 dark:text-slate-400">Open to Remote & Relocation</span>
+                    </div>
+                  </div>
+
+                  <!-- Phone / WhatsApp Box -->
                   <div class="p-4 rounded-xl border border-slate-200/80 dark:border-slate-800 bg-slate-50/60 dark:bg-slate-800/40 flex items-center justify-between gap-3">
                     <div class="flex items-center gap-3 min-w-0">
                       <div class="w-10 h-10 rounded-lg bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0">
@@ -869,26 +1164,12 @@
                       Chat →
                     </a>
                   </div>
-
-                  <!-- Location Box -->
-                  <div class="p-4 rounded-xl border border-slate-200/80 dark:border-slate-800 bg-slate-50/60 dark:bg-slate-800/40 flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-lg bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center shrink-0">
-                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                    </div>
-                    <div>
-                      <span class="block text-[11px] font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500">Location</span>
-                      <span class="text-xs sm:text-sm font-semibold text-slate-900 dark:text-white block">
-                        Rajasthan, India
-                      </span>
-                      <span class="text-[11px] text-slate-500 dark:text-slate-400">Open to Remote & Relocation</span>
-                    </div>
-                  </div>
                 </div>
               </div>
 
               <!-- Bottom Social & Resume Strip -->
               <div class="pt-5 mt-6 border-t border-slate-100 dark:border-slate-800 flex flex-wrap items-center justify-between gap-3">
-                <span class="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-wider">Socials</span>
+                <span class="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-wider">Profiles</span>
                 <div class="flex items-center gap-3">
                   <a
                     href="https://github.com/Mohammmedrafique"
@@ -1028,25 +1309,115 @@
     </main>
 
     <!-- ======================================================================
-         9. Footer
+         9. Clean Minimalist Footer
          ====================================================================== -->
     <footer class="w-full py-8 border-t border-slate-200 dark:border-slate-800 text-xs text-slate-500 dark:text-slate-400 bg-white dark:bg-[#0b0d11]">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
         <div>
           © <span id="current-year">2026</span> Mohammed Rafique • Full Stack Developer
         </div>
-        <button
-          type="button"
-          class="hover:text-slate-900 dark:hover:text-white transition-colors"
-          id="back-to-top"
-          aria-label="Scroll to top"
-        >
-          Back to Top ↑
-        </button>
+        <div class="flex items-center gap-4">
+          <a href="https://github.com/Mohammmedrafique" target="_blank" rel="noopener noreferrer" class="hover:text-slate-900 dark:hover:text-white transition-colors">GitHub</a>
+          <a href="https://www.linkedin.com/in/mohammed-rafique-283501113/" target="_blank" rel="noopener noreferrer" class="hover:text-slate-900 dark:hover:text-white transition-colors">LinkedIn</a>
+          <a href="mailto:Kota.mohdrafiq@gmail.com" class="hover:text-slate-900 dark:hover:text-white transition-colors">Email</a>
+          <button
+            type="button"
+            class="hover:text-slate-900 dark:hover:text-white transition-colors"
+            id="back-to-top"
+            aria-label="Scroll to top of page"
+          >
+            Back to Top ↑
+          </button>
+        </div>
       </div>
     </footer>
 
-    <!-- Mobile Drawer (Located at document end so it never interferes with flow) -->
+    <!-- ======================================================================
+         10. Project Details Dialog Modal (Accessible Native HTML5 Dialog)
+         ====================================================================== -->
+    <dialog id="project-modal" closedby="any" aria-labelledby="modal-title" class="p-0 border border-slate-200 dark:border-slate-800 rounded-2xl bg-white dark:bg-[#11141a] text-slate-900 dark:text-slate-100 shadow-2xl backdrop:bg-slate-950/70 backdrop:backdrop-blur-sm">
+      <div class="p-6 sm:p-8 max-h-[85vh] overflow-y-auto">
+        <!-- Modal Header -->
+        <div class="flex items-start justify-between gap-4 pb-4 mb-6 border-b border-slate-200 dark:border-slate-800">
+          <div>
+            <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 mb-2">
+              Case Study & Technical Architecture
+            </div>
+            <h3 id="modal-title" class="text-xl sm:text-2xl font-bold tracking-tight text-slate-900 dark:text-white"></h3>
+            <p id="modal-subtitle" class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1"></p>
+          </div>
+          <button
+            type="button"
+            id="close-modal-btn"
+            class="w-8 h-8 rounded-lg flex items-center justify-center border border-slate-200 dark:border-slate-700 text-slate-500 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors shrink-0"
+            aria-label="Close dialog"
+          >
+            ✕
+          </button>
+        </div>
+
+        <!-- Image Preview -->
+        <div class="w-full aspect-[16/9] rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-800 mb-6 border border-slate-200 dark:border-slate-800">
+          <img id="modal-image" src="" alt="" class="w-full h-full object-cover" />
+        </div>
+
+        <!-- Grid of Problem & Solution -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+          <div class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/60 dark:bg-slate-900/60">
+            <span class="block text-[11px] font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-1">The Problem</span>
+            <p id="modal-problem" class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed"></p>
+          </div>
+          <div class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/60 dark:bg-slate-900/60">
+            <span class="block text-[11px] font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-1">The Solution</span>
+            <p id="modal-solution" class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed"></p>
+          </div>
+        </div>
+
+        <!-- Key Features List -->
+        <div class="mb-6">
+          <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-3">Key Technical Features</h4>
+          <ul id="modal-features" class="space-y-2"></ul>
+        </div>
+
+        <!-- Architecture Breakdown -->
+        <div class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/60 dark:bg-slate-900/60 mb-6">
+          <span class="block text-[11px] font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-1">System Architecture</span>
+          <p id="modal-architecture" class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-mono"></p>
+        </div>
+
+        <!-- Tech Stack Badges -->
+        <div class="mb-6">
+          <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-2">Technologies Used</h4>
+          <div id="modal-stack" class="flex flex-wrap gap-1.5"></div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex items-center gap-3 pt-4 border-t border-slate-200 dark:border-slate-800">
+          <a
+            id="modal-demo"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold bg-blue-600 hover:bg-blue-700 text-white transition-colors"
+          >
+            <span>Live Demo</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          </a>
+          <a
+            id="modal-github"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold border border-slate-300 dark:border-slate-700 hover:border-slate-400 dark:hover:border-slate-600 text-slate-800 dark:text-slate-200 transition-colors"
+          >
+            <span>View Source Code</span>
+            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          </a>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- Mobile Popover Drawer (Located at document end so it never interferes with flow) -->
     <div id="mobile-drawer" popover="auto" role="dialog" aria-label="Mobile Navigation" class="bg-white dark:bg-[#11141a] border-l border-slate-200 dark:border-slate-800 text-slate-900 dark:text-slate-100 shadow-2xl">
       <div>
         <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-200 dark:border-slate-800">
@@ -1090,7 +1461,7 @@
       </div>
     </div>
 
-    <!-- Script -->
+    <!-- Portfolio Interactions Script -->
     <script src="./index.js"></script>
   </body>
 </html>

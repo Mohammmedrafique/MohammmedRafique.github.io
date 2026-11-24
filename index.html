@@ -12,6 +12,62 @@
     <meta name="author" content="Mohammed Rafique" />
     <link rel="canonical" href="https://mohammmedrafique.github.io/" />
 
+    <!-- Theme Color for Mobile Browsers -->
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0b0d11" media="(prefers-color-scheme: dark)" />
+
+    <!-- Structured Data (JSON-LD) for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://mohammmedrafique.github.io/#website",
+          "url": "https://mohammmedrafique.github.io/",
+          "name": "Mohammed Rafique | Full Stack Developer",
+          "description": "Portfolio of Mohammed Rafique - Full Stack Developer building scalable web applications with React, Node.js, Express, and MongoDB.",
+          "inLanguage": "en-US"
+        },
+        {
+          "@type": "ProfilePage",
+          "@id": "https://mohammmedrafique.github.io/#profilepage",
+          "url": "https://mohammmedrafique.github.io/",
+          "name": "Mohammed Rafique Profile",
+          "isPartOf": { "@id": "https://mohammmedrafique.github.io/#website" },
+          "mainEntity": {
+            "@type": "Person",
+            "@id": "https://mohammmedrafique.github.io/#person",
+            "name": "Mohammed Rafique",
+            "jobTitle": "Full Stack Developer",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "Schoollog"
+            },
+            "url": "https://mohammmedrafique.github.io/",
+            "image": "https://mohammmedrafique.github.io/assets/pic2.jpg",
+            "sameAs": [
+              "https://www.linkedin.com/in/mohammed-rafique-283501113/",
+              "https://github.com/Mohammmedrafique"
+            ],
+            "knowsAbout": [
+              "Full Stack Development",
+              "MERN Stack",
+              "React.js",
+              "Node.js",
+              "Express.js",
+              "MongoDB",
+              "TypeScript",
+              "REST APIs",
+              "Tailwind CSS"
+            ]
+          }
+        }
+      ]
+    }
+    </script>
+
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://mohammmedrafique.github.io/" />
@@ -1358,7 +1414,7 @@ app.<span class="text-blue-400">get</span>(<span class="text-emerald-300">"/api/
 
         <!-- Image Preview -->
         <div class="w-full aspect-[16/9] rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-800 mb-6 border border-slate-200 dark:border-slate-800">
-          <img id="modal-image" src="" alt="" class="w-full h-full object-cover" />
+          <img id="modal-image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3Crect width='100%25' height='100%25' fill='%231e293b'/%3E%3C/svg%3E" alt="Project preview screenshot" loading="lazy" class="w-full h-full object-cover" />
         </div>
 
         <!-- Grid of Problem & Solution -->
